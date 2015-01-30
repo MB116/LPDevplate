@@ -1,0 +1,59 @@
+/*-------------------------------------------------*\
+     $Testimonials
+\*-------------------------------------------------*/
+.testimonials{
+	padding-bottom: 80px;
+	&__title{
+		margin-bottom: 50px;
+	}
+	&__item{
+		height: 300px;
+		&-left{
+			@include span(4);
+			height: 300px;
+			&:before{
+				content: '';
+				display: inline-block;
+				width: 0;
+				height: 100%;
+				vertical-align: middle;
+			}
+
+			.bx-wrapper & > img{
+				display: inline-block;
+				vertical-align: middle;
+				border: 5px solid $orange;
+				border-radius: 50%;
+			}
+		}
+
+		&-right{
+			@include span(8 last);
+			height: 300px;
+			text-align: left;
+
+			&:before{
+				content: '';
+				display: inline-block;
+				width: 0;
+				height: 100%;
+				vertical-align: middle;
+			}
+
+			p{
+				display: inline-block;
+				vertical-align: middle;
+				width: 99%;
+				font-size: 20px;
+				line-height: 1.2;
+				
+				strong{
+					font-size: 24px;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+
+
+}/* End .testimonials */

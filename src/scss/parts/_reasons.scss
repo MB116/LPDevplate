@@ -1,0 +1,49 @@
+/*-------------------------------------------------*\
+     $Reasons
+\*-------------------------------------------------*/
+.reasons{
+	@include layout($no-gutters);
+
+	&__title{
+		margin-bottom: 50px;
+	}
+
+	&__item{
+		@include span(4);
+		min-height: 210px;
+		margin-bottom: 30px;
+		text-align: center;
+
+		&-icon{
+			width:  134px;
+			height: 134px;
+			margin: 0 auto 15px;
+			padding-top: 5px;
+			border: 2px solid $orange;
+			border-radius: 50%;
+			text-align: center;
+
+			i{
+				display: block;
+				width: 120px;
+				height: 120px;
+				margin: 0 auto;
+				border-radius: 50%;
+				background-position: center top;
+				background-repeat: no-repeat;
+				transition: background-color 0.2s;
+			}
+
+			&:hover{
+				i{
+					background-color: $orange;
+					background-position:center -120px;
+				}
+			}
+		}
+
+		h3{
+			font-size: 24px;
+		}
+	}
+}/* End .reasons */

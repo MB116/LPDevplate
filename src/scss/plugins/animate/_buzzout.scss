@@ -1,0 +1,40 @@
+/*************************** buzz-out *********************************/
+.buzz-out{
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: buzz-out;
+  animation-name: buzz-out;
+}
+/*******Keyframes********/
+@-webkit-keyframes buzz-out {
+  5% {-webkit-transform: translateX(3px) rotate(2deg);transform: translateX(3px) rotate(2deg);}
+  10% {-webkit-transform: translateX(-3px) rotate(-2deg);transform: translateX(-3px) rotate(-2deg);}
+  15% {-webkit-transform: translateX(3px) rotate(2deg);transform: translateX(3px) rotate(2deg);}
+  20% {-webkit-transform: translateX(-3px) rotate(-2deg);transform: translateX(-3px) rotate(-2deg);}
+  25% {-webkit-transform: translateX(2px) rotate(1deg);transform: translateX(2px) rotate(1deg);}
+  30% {-webkit-transform: translateX(-2px) rotate(-1deg);transform: translateX(-2px) rotate(-1deg);}
+  35% {-webkit-transform: translateX(2px) rotate(1deg);transform: translateX(2px) rotate(1deg);}
+  40% {-webkit-transform: translateX(-2px) rotate(-1deg);transform: translateX(-2px) rotate(-1deg);}
+  45% {-webkit-transform: translateX(1px) rotate(0);transform: translateX(1px) rotate(0);}
+  50% {-webkit-transform: translateX(-1px) rotate(0);transform: translateX(-1px) rotate(0);}
+  55%,100%{-webkit-transform: translateX(0) rotate(0);transform: translateX(0) rotate(0);}
+}
+
+@keyframes buzz-out {
+  5% {-webkit-transform: translateX(3px) rotate(2deg);transform: translateX(3px) rotate(2deg);}
+  10% {-webkit-transform: translateX(-3px) rotate(-2deg);transform: translateX(-3px) rotate(-2deg);}
+  15% {-webkit-transform: translateX(3px) rotate(2deg);transform: translateX(3px) rotate(2deg);}
+  20% {-webkit-transform: translateX(-3px) rotate(-2deg);transform: translateX(-3px) rotate(-2deg);}
+  25% {-webkit-transform: translateX(2px) rotate(1deg);transform: translateX(2px) rotate(1deg);}
+  30% {-webkit-transform: translateX(-2px) rotate(-1deg);transform: translateX(-2px) rotate(-1deg);}
+  35% {-webkit-transform: translateX(2px) rotate(1deg);transform: translateX(2px) rotate(1deg);}
+  40% {-webkit-transform: translateX(-2px) rotate(-1deg);transform: translateX(-2px) rotate(-1deg);}
+  45% {-webkit-transform: translateX(1px) rotate(0);transform: translateX(1px) rotate(0);}
+  50% {-webkit-transform: translateX(-1px) rotate(0);transform: translateX(-1px) rotate(0);}
+  55%,100% {-webkit-transform: translateX(0px) rotate(0);transform: translateX(0px) rotate(0);}
+}
+/*************************** End buzz-out *********************************/

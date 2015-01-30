@@ -1,0 +1,74 @@
+/*-------------------------------------------------*\
+					$Footer
+\*-------------------------------------------------*/
+.footer{
+	padding: 20px 0;
+	background-color: $footerBg;
+	color: $default;
+	font-size: 18px;
+
+	&__contacts{
+		width: 275px;
+		margin: 0 auto;
+		text-align: center;
+
+		p{
+			margin-bottom: 10px;
+			text-align: left;
+		}
+		a{
+			display: inline-block;
+			margin-bottom: 15px;
+			color: $default;
+			text-decoration: underline;
+		}
+		i, span{
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+	&__icon{
+		display: inline-block;
+		width: 23px;
+		height: 32px;
+
+		&--address{
+			height: 50px;
+			background-position: -33px 0; }
+		&--phone  {
+			width: 22px;
+			background-position: -55px 0;
+		}
+		&--email  {
+			width: 26px;
+			height: 19px;
+			background-position: -77px 0;
+		}
+	}
+	&__copy{
+		display: inline-block;
+		float: left;
+		line-height: 40px;
+		a{
+			color: $default;
+			text-decoration: underline;
+		}
+    }
+	&__created-by{
+		display: inline-block;
+		float: right;
+
+		&>a{
+		    color: $default;
+		    text-decoration: underline;
+		    &:hover{
+			    text-decoration: none;
+	        }
+		}
+		img{
+		  display: inline-block;
+		  vertical-align: middle;
+		  margin: 0 0 5px 10px;
+		}
+    }
+}/* End .footer */

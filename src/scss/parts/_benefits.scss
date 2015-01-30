@@ -1,0 +1,99 @@
+/*-------------------------------------------------*\
+     $Benefits
+\*-------------------------------------------------*/
+.benefits{
+     background-position: center top;
+     background-repeat: no-repeat;
+
+     &__title{
+          margin-bottom: 75px;
+     }
+     &__text{
+          @include span(10 at 2);
+          padding-top: 75px;
+          
+          h3{
+               font-size: 24px;
+               font-weight: bold;
+          }
+          p{
+               font-size: 24px;
+          }
+          &-left{
+               @include span(6);
+               padding-right: 150px;
+               text-align: right;
+          }
+
+          &-right{
+               @include span(6 last);
+               padding-left: 150px;
+               text-align: left;
+          }
+     }
+
+     &__item{
+          position: relative;
+          width: 81px;
+          height: 81px;
+          margin-bottom: 40px;
+          cursor: pointer;
+
+          img{
+               position: relative;
+               z-index: 1;
+               border-radius: 50%;
+               background-color: $orange;
+          }
+          &-tooltip{
+               position: absolute;
+               top: 0;
+               width: 81px;
+               height: 81px;
+               padding-left: 60px;
+               border: 2px solid $orange;
+               border-radius: 40px;
+               background-color: $default;
+               opacity: 0;
+               transition: opacity 0.3s, width 0.5s;
+
+               &:before{
+                    content: '';
+                    display: inline-block;
+                    height: 100%;
+                    vertical-align: middle;
+                    overflow: hidden;
+               }
+               span{
+                    display: inline-block;
+                    vertical-align: middle;
+               }
+          }
+          &:hover{
+               .benefits__item-tooltip{
+                    width: 265px;
+                    opacity: 1;
+               } 
+          }
+     }
+
+     &__left{
+          @include span(1);
+     }
+
+     &__right{
+          @include span(1 last);
+          .benefits__item-tooltip{
+               right: 0;
+               padding-left: 0;
+               padding-right: 60px;
+          }
+     }
+
+     &__center{
+          display: inline-block;
+          margin-top: 50px;
+     }
+
+
+}/* End .benefits */

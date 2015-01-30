@@ -1,0 +1,30 @@
+/*-------------------------------------------------*\
+     $Managers
+\*-------------------------------------------------*/
+.managers{
+
+	&__title{
+		margin-bottom: 50px;
+	}
+
+	&__item{
+		@include span(4);
+		margin-bottom: 30px;
+		i{
+			display: inline-block;
+			width: 235px;
+			height: 235px;
+			margin-bottom: 20px;
+			background-position: center center;
+			background-repeat: no-repeat;
+			overflow: hidden;
+			border: 5px solid $orange;
+			border-radius: 50%;
+		}
+
+		figcaption{
+			font-size: 24px;
+		}
+	}
+
+}/* End .managers */

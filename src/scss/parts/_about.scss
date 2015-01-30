@@ -1,0 +1,42 @@
+/*-------------------------------------------------*\
+     $About
+\*-------------------------------------------------*/
+.about{
+	&__title{
+		margin-bottom: 50px;
+	}
+	&__item{
+		@include span(3);
+
+		i{
+			display: inline-block;
+			width: 150px;
+			height: 150px;
+			background: url("../../img/about-150x150.png") 0 0 no-repeat;
+		}
+		h3{
+			font-size: 24px;
+		}
+		&--1{
+			i{
+
+			}
+		}
+		&--2{
+			i{
+				background-position: 0 -150*1px;
+			}
+		}
+		&--3{
+			i{
+				background-position: 0 -150*2px;
+			}
+		}
+		&--4{
+			@include span(3 last);
+			i{
+				background-position: 0 -150*3px;
+			}
+		}
+	}
+}/* End .about */

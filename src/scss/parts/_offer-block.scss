@@ -1,0 +1,40 @@
+/*-------------------------------------------------*\
+     $Offer block
+\*-------------------------------------------------*/
+.offer-block{
+	@include height("../img/offer.jpg");
+	position: relative;
+	padding-top: 200px;
+
+	background-position: center center;
+	background-repeat: no-repeat;
+
+	&__offer{
+		margin-top: 100px;
+	}
+	&__form{
+		@include span(4 last);
+		@include post(0.5);
+	}
+	&__footer{
+		position: absolute;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		padding: 10px 0;
+		background-color: rgba($default, 0.5);
+
+		img{
+			float: left;
+		}
+
+	}
+	&__phones{
+		@include span(2.5 last);
+
+		&-link{
+			font-size: 24px;
+			line-height: 1.5;
+		}
+	}
+}/* End .offer-block */

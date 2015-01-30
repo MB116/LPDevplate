@@ -1,0 +1,5 @@
+node_modules/
+design/*.psd
+design/*.jpg
+design/*.png
+.sass-cache/

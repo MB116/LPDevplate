@@ -1,0 +1,80 @@
+САЙТ СВЕРСТАН
+--------------
+На разных браузерах протестирован
+На мобильных протестирован
+
+Заявки отправляются на почты okna@exclusivedomstroy.kz
+Дублируются на klienty.kz@gmail.com
+
+ПРОИЗВОДИТЕЛЬНОСТЬ:
+-------------------
+Начало отображения: 0.791s
+Время загрузки: 3.034s
+Speed Index: 1414
+Вес страницы: 643KB
+PageSpeed Score: 97 из 100
+Ссылки на результаты тестов:
+ - http://www.webpagetest.org/result/150119_HF_J9N/
+ - http://gtmetrix.com/reports/okna-almaty.com/SYNuz193
+ - https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fokna-almaty.com%2F&tab=desktop
+
+ОТЧЕТ ДЛЯ ТРАФИКОВ
+-------------------
+Создал новый аккаунты и расшерил на salem@cpc.kz и klikobilie@yandex.ru
+Аккаунт аналитики:
+	Логин:
+		oknaalmaty2015
+	Пароль:
+		click2014
+
+Аккаунт метрики:
+	Логин:
+		oknaalmaty2015
+	Пароль:
+		click2014
+
+GOOGLE==========================
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58710603-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+END GOOGLE======================
+
+------------------------------
+
+YANDEX==========================
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter27992616 = new Ya.Metrika({id:27992616,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/27992616" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+END YANDEX======================

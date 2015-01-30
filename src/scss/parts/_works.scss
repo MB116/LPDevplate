@@ -1,0 +1,22 @@
+/*-------------------------------------------------*\
+     $Works
+\*-------------------------------------------------*/
+.works{
+	background-color: $grey;
+
+	&__title{
+		margin-bottom: 50px;
+	}
+
+	&__item{
+		display: inline-block;
+		cursor: zoom-in;
+
+		&:nth-child(3),
+		&:nth-child(4),
+		&:nth-child(5) {
+			margin-left: 16px;
+		}
+	}
+
+}/* End .works */

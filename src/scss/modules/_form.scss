@@ -1,0 +1,122 @@
+/**
+ *
+ * $Form
+ *
+ */ 
+.form{
+	background-color: #fff;
+	color: $text;
+  	padding: 20px 0;
+  	box-shadow: 0 0 5px $primary;
+	text-align: center;
+	box-shadow: 0 0 0 7px $formBdr;
+	border-radius: 5px;
+
+  	//Forms inner container
+	&__container{
+	  padding: 0 30px;
+	}
+
+	// Forms title
+	&__title{
+		font-size: 28px;
+		font-weight: normal;
+		text-transform: uppercase;
+		line-height: 1.2;
+	}
+	
+	// Forms subtitle
+	&__text{
+		margin-bottom: 10px;
+		font-size: 18px;
+		line-height: 1;
+	}
+
+	// Forms input fields
+	&__input{
+		display: inline-block;
+		width: 100%;
+		height: 40px;
+		margin-bottom: 15px;
+		padding: 0 10px;
+		border: 1px solid $inputBdr;
+		outline: 0;
+		background-color: $inputBg;
+		color: $primary;
+		font-family: $defaultFont;
+		font-size: 18px;
+		font-weight: normal;
+		text-align: left;
+
+		&::-webkit-input-placeholder {
+			font-family: $defaultFont;
+			font-size: 18px;
+			text-transform: none;
+			color: $primary;
+			text-align: left;
+			font-weight: 300;
+			height: 40px;
+			opacity: 1;
+		}
+
+		&:-moz-placeholder { 
+			font-family: $defaultFont;
+			font-size: 18px;
+			text-transform: none;
+			color: $primary;
+			text-align: left;
+			font-weight: 300;
+			height: 40px;
+			opacity: 1;
+		}
+
+		&::-moz-placeholder {  
+			font-family: $defaultFont;
+			font-size: 18px;
+			text-transform: none;
+			color: $primary;
+			text-align: left;
+			font-weight: 300;
+			height: 40px;
+			opacity: 1;
+		}
+
+		&.error{
+			background-color: lighten($error, 45%);
+			border: 1px solid $error;
+		}
+	}
+		
+	// Forms required fields wrapper
+	&__errorbox{
+		position: relative;
+		display: block;
+	}
+	
+	// Forms label
+	label{
+		font-size: 11px;
+		font-weight: normal;
+
+		&.error{
+			position: absolute;
+			display: inline-block;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			margin: -15px 0 0;
+			color: $error;
+			font-family: arial;
+			font-size: 10px;
+			text-align: center;
+		}
+	}
+
+	// Forms button
+	&__btn{
+		width: 100%;
+		height: 48px;
+		margin-top: 15px;
+		padding: 0 20px;
+	}
+}

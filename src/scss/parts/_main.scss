@@ -1,0 +1,33 @@
+/*-------------------------------------------------*\
+					$Main
+\*-------------------------------------------------*/
+.main{
+  @include part("../img/main.jpg");
+  background-size: cover;
+  padding-top: 50px;
+
+  &__title{
+    @include span(6 last);
+    font-size: 35px;
+    text-align: right;
+    color: $default;
+    text-shadow: 1px 1px 5px $primary;
+  }
+  &__subtitle{
+    @include span(6 last);
+    margin-top: 15px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 24px;
+    color: $default;
+    background-color: $orange;
+  }
+  &__offer{
+    margin-top: 50px;
+  }
+  &__form{
+	@include span(4 last);
+    @include post(0.5);
+  }
+}/* End .main */

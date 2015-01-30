@@ -1,0 +1,87 @@
+/*-------------------------------------------------*\
+	  Configuration file for all website styles
+\*-------------------------------------------------*/
+
+/*===================================================
+ *
+ * $Compass imports
+ *
+ */
+	@import 'compass';
+	@import 'compass/reset';
+	@import 'compass/css3';
+//===================================================
+
+
+/*===================================================
+ *
+ * $Custom imports
+ *
+ */
+ 	//Base settings
+	@import 'settings/fonts'; 
+	@import 'settings/grids';
+	@import 'settings/colors';
+	@import 'settings/mixins';
+	@import 'settings/default';
+	
+	//Base modules
+	@import 'modules/_btns';
+	@import 'modules/_form';
+	@import 'modules/_scrollup';
+	@import 'modules/_sprites';
+	@import 'modules/_offer';
+//===================================================
+
+
+/*===================================================
+ *
+ * $Page sections
+ *
+ */ 
+	@import 'parts/header'; 
+	@import 'parts/main';
+	@import 'parts/about';
+	@import 'parts/products';
+	@import 'parts/benefits';
+	@import 'parts/services';
+	@import 'parts/reasons';
+	@import 'parts/sale';
+	@import 'parts/steps';
+	@import 'parts/works';
+	@import 'parts/managers';
+	@import 'parts/offer-block';
+	@import 'parts/testimonials';
+	@import 'parts/footer';
+//===================================================
+
+
+/*===================================================
+ *
+ * Plugins
+ *
+ */ 
+	// Animate.css
+		// @import "plugins/animate/default";
+		// @import "plugins/animate/fadeInUp";
+		// @import "plugins/animate/fadeIn";
+		// @import "plugins/animate/fadeOut";
+	
+	@import "plugins/magnificPopup";
+	@import "plugins/reject";
+	@import "plugins/prettyPhoto";
+	@import "plugins/bxSlider";
+	// @import "plugins/flipClock";
+//===================================================
+
+
+/*===================================================
+ *
+ * Plugins intialization
+ *
+ */ 
+	@import "initialize/popup";
+	@import "initialize/gallery";
+	@import "initialize/slider";
+	// @import "initialize/timer";
+//===================================================
