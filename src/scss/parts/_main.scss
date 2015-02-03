@@ -2,32 +2,22 @@
 					$Main
 \*-------------------------------------------------*/
 .main{
-  @include part("../img/main.jpg");
-  background-size: cover;
-  padding-top: 50px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	text-align: center;
 
-  &__title{
-    @include span(6 last);
-    font-size: 35px;
-    text-align: right;
-    color: $default;
-    text-shadow: 1px 1px 5px $primary;
-  }
-  &__subtitle{
-    @include span(6 last);
-    margin-top: 15px;
-    margin-bottom: 20px;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 24px;
-    color: $default;
-    background-color: $orange;
-  }
-  &__offer{
-    margin-top: 50px;
-  }
-  &__form{
-	@include span(4 last);
-    @include post(0.5);
-  }
+	&__title{
+		margin-bottom: 0;
+	}
+
+	&__subtitle{
+		margin-bottom: 30px;
+		font-size: 30px;
+		font-weight: bold;
+
+	}
+
+	&__form{
+		@include span(4 last);
+	}
 }/* End .main */

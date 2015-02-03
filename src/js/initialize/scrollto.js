@@ -13,13 +13,13 @@
 			// Fade in scroll-up btn
 			$(window).scroll(function(){
 				if( $(this).scrollTop() > 200 ){
-					$('.scroll-up').fadeIn();
+					$('#jsScrollTop').fadeIn();
 				}else{
-					$('.scroll-up').fadeOut();
+					$('#jsScrollTop').fadeOut();
 				}
 			});
 			//Scroll to top
-			$('.scroll-up').click(function(){
+			$('#jsScrollTop').click(function(){
 				$('body,html').animate({
 					scrollTop:0
 				},

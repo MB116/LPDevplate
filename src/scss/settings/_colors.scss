@@ -4,20 +4,27 @@
  *
  */
 
+
+//Backgrounds
 $body:#fff;
+$headerBg: #78909C;
 $footerBg: #6c6966;
 
+//Primary colors
 $default:#fff;
 $primary:#000;
 $orange: #ff8f00;
 $grey: #f5f5f5;
 
-$btn: #ffc700;
+//Elements colors
+$btn: #cd574d;
 $title: #6c6966;
 $text: #6c6966;
-$link: #6c6966;
+$link: #fff;
 $error:#f00;
 
+//Forms colors
+$formBg: #fff;
 $formBdr: rgba(#a2a2a2, 0.6);
 $inputBg: #e8e8e8;
 $inputBdr: #c3c3c3;

@@ -29,7 +29,7 @@
 		/******************************************
 		 * Main form validation
 		 */
-			$("#js-form-1").validate({
+			$("#jsForm_1").validate({
 				rules:{
 					Name:{
 						required:true,
@@ -66,7 +66,7 @@
 				}
 			});
 
-			$("#js-form-2").validate({
+			$("#jsForm_2").validate({
 				rules:{
 					Name:{
 						required:true,
@@ -103,7 +103,7 @@
 				}
 			});
 
-			$("#js-form-3").validate({
+			$("#jsForm_3").validate({
 				rules:{
 					Name:{
 						required:true,
@@ -140,7 +140,7 @@
 				}
 			});
 
-			$("#js-form-modal").validate({
+			$("#jsForm_modal").validate({
 				rules:{
 					Name:{
 						required:true,

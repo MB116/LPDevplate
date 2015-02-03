@@ -3,7 +3,7 @@
 \*-------------------------------------------------*/
 .header{
     height: 100px;
-    background-color: $default;
+    background-color: $headerBg;
 
     &__logo{
 		display: inline-block;
@@ -14,17 +14,9 @@
 	&__phones{
 		@include span(2.5 last);
 		position: relative;
+		padding-top: 10px;
 		text-align: center;
 
-		i{
-			display: inline-block;
-			float: left;
-			width: 32px;
-			height: 40px;
-			background-position: left center;
-			margin-right: 10px;
-		}
-		&-title{ display: none; }
 		&-link{
 	        font-size: 20px;
 			display: block;
@@ -35,53 +27,54 @@
 		}
     }
 
-	&--sticky{
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		z-index: 3;
-		height: 50px;
-		padding-top: 5px;
-		transition: all 0.3s;
-		box-shadow: 0 0 5px $primary;
-
-		.header__logo{ display: none; }
-
-		.header__phones{
-			width: 100%;
-			float: none;
-			text-align: right;
-
-			i{
-				float: none;
-				background-size: 46px 15px;
-				width: 15px;
-				height: 24px;
-				vertical-align: text-bottom;
-			}
-			&-title{
-				display: inline-block;
-				float: left;
-				font-size: 20px;
-				line-height: 40px;
-			}
-			&-link{
-				display: inline-block;
-
-				&--bordered{
-					border-left: 2px solid $text;
-					margin-left: 5px;
-					padding-left: 5px;
-				}
-			}
-			&-btn{
-				margin-top: 0;
-				margin-left: 30px;
-			}
-		}
-	}
+//	&--sticky{
+//		position: fixed;
+//		top: 0;
+//		left: 0;
+//		right: 0;
+//		z-index: 3;
+//		height: 50px;
+//		padding-top: 5px;
+//		transition: all 0.3s;
+//		box-shadow: 0 0 5px $primary;
+//
+//		.header__logo{ display: none; }
+//
+//		.header__phones{
+//			width: 100%;
+//			float: none;
+//			text-align: right;
+//
+//			i{
+//				float: none;
+//				background-size: 46px 15px;
+//				width: 15px;
+//				height: 24px;
+//				vertical-align: text-bottom;
+//			}
+//			&-title{
+//				display: inline-block;
+//				float: left;
+//				font-size: 20px;
+//				line-height: 40px;
+//			}
+//			&-link{
+//				display: inline-block;
+//
+//				&--bordered{
+//					border-left: 2px solid $text;
+//					margin-left: 5px;
+//					padding-left: 5px;
+//				}
+//			}
+//			&-btn{
+//				margin-top: 0;
+//				margin-left: 30px;
+//			}
+//		}
+//	}
 }/* End .header */
+
 @media screen and (max-width: 1150px) {
 	.header--sticky {
 		display: none;

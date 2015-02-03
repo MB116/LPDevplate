@@ -4,17 +4,6 @@
  *
  */
 
-// Page sections height calculation using background images height
-@mixin part($img) {
-	height: image-height($img);
-	background: #fff url($img) top center no-repeat;
-}
-
-// Page sections background images height calculation
-@mixin height($img) {
-	height: image-height($img);
-}
-
 // Clearfix silent class
 %clear{
 	&:after{

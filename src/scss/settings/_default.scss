@@ -14,7 +14,6 @@
 		color: $text;
 		background-color: #fff;
 		overflow-x: hidden;
-		overflow-y: auto!important;
 	}
 	
 	section{
@@ -38,11 +37,16 @@
  * $Default classes
  *
  */ 
- 	.container{ position: relative; }
+ 	.container{
+	    position: relative;
+	    height: 100%;
+	    @extend %clear;
+    }
  	
  	.clear{ clear: both; }
  	
  	.title {
+	    margin-bottom: 30px;
 		font-size: 36px;
 	    font-family: $titleFont;
 	    font-weight: bold;
@@ -53,15 +57,4 @@
 		&--primary {
 			color: $text;
 		}
-	    section &{
-		    font-size: 30px;
-	    }
-	    section &:after{
-		    content: '';
-		    display: block;
-		    width: 300px;
-		    height: 5px;
-		    margin: 10px auto 0;
-		    background-color: $orange;
-	    }
 	}
