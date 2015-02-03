@@ -10,9 +10,8 @@
 		global-box-sizing: border-box,
 	);
 
-/*
- * Default grid
- */
+
+// Default grid
 	$default: (
 		container: 960px,
 		columns: 12,
@@ -20,9 +19,8 @@
 		global-box-sizing: border-box,
 	);
 
-/*
- * Grids 12 cols without gutters
- */
+
+// Grids with 12 cols and without gutters
 	$no-gutters: (
 		container: 960px,
 		columns: 12,
@@ -30,36 +28,33 @@
 		global-box-sizing: border-box,
 	);
 
-/*
- * Grids 5 columns
- */
+
+// Grids with 5 columns
 	$five: (
 		container: 960px,
 		columns: 5,
 		gutters: 1/5,
 		global-box-sizing: border-box,
 	);
-/*
- * Grids 4 columns
- */
+
+// Grids with 4 columns
 	$four: (
 		container: 960px,
 		columns: 4,
 		gutters: 1/4,
 		global-box-sizing: border-box,
 	);
-/*
- * Grids 3 columns
- */
+
+// Grids with 3 columns
 	$three: (
 		container: 960px,
 		columns: 3,
 		gutters: 0.2,
 		global-box-sizing: border-box,
 	);
-/*
- * Grids 2 columns
- */
+
+// Grids with 2 columns
+
 	$half: (
 		container: 960px,
 		columns: 2,

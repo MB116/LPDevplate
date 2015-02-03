@@ -2,14 +2,6 @@
 	  Configuration file for all website styles
 \*-------------------------------------------------*/
 
-/*===================================================
- *
- * $Compass imports
- *
- */
-	@import 'compass';
-	@import 'compass/reset';
-	@import 'compass/css3';
 //===================================================
 
 
@@ -19,7 +11,8 @@
  *
  */
  	//Base settings
-	@import 'settings/fonts'; 
+	@import 'settings/normalize';
+	@import 'settings/fonts';
 	@import 'settings/grids';
 	@import 'settings/colors';
 	@import 'settings/mixins';
@@ -58,7 +51,7 @@
 		// @import "plugins/animate/fadeIn";
 		// @import "plugins/animate/fadeOut";
 	
-	@import "plugins/magnificPopup";
+	@import "plugins/featherlight";
 	@import "plugins/reject";
 //	@import "plugins/prettyPhoto";
 //	@import "plugins/bxSlider";
