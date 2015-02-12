@@ -139,44 +139,6 @@
 					}
 				}
 			});
-
-			$("#jsForm_modal").validate({
-				rules:{
-					Name:{
-						required:true,
-						minlength:2,
-						maxlength:100,
-					},
-					Email:{
-						required:false,
-						minlength:2,
-						maxlength:100,
-					},
-					Phone:{
-						required:true,
-						minlength:2,
-						maxlength:100,
-					}
-				},
-				messages:{
-					Name:{
-						required:"Поле обязательно для заполнения!",
-						minlength:"Поле не должно содержать менее 2-х символов",
-						maxlength:"",
-					},
-					Email:{
-						required:"Поле обязательно для заполнения!",
-						minlength:"Поле не должно содержать менее 2-х символов",
-						maxlength:"",
-					},
-					Phone:{
-						required:"Поле обязательно для заполнения!",
-						minlength:"Поле не должно содержать менее 2-х символов",
-						maxlength:"",
-					}
-				}
-			});
-
 	}); //forms
 
 

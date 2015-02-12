@@ -21,6 +21,7 @@
 	//Base modules
 	@import 'modules/_btns';
 	@import 'modules/_form';
+	@import "modules/_modal";
 	@import 'modules/_scrollup';
 	@import 'modules/_sprites';
 //===================================================
@@ -51,7 +52,7 @@
 		// @import "plugins/animate/fadeIn";
 		// @import "plugins/animate/fadeOut";
 	
-	@import "plugins/featherlight";
+
 	@import "plugins/reject";
 //	@import "plugins/prettyPhoto";
 //	@import "plugins/bxSlider";
@@ -64,7 +65,6 @@
  * Plugins intialization
  *
  */ 
-	@import "initialize/popup";
 //	@import "initialize/gallery";
 //	@import "initialize/slider";
 //	@import "initialize/timer";
