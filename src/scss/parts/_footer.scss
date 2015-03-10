@@ -7,16 +7,29 @@
 	background-color: $footerBg;
 	color: $default;
 	font-size: 18px;
+	text-align: center;
 
-	&__copy{
-		display: inline-block;
-		float: left;
+	h3{
+		font-size: 24px;
+	}
+
+	a{
+		color: $default;
+		text-decoration: underline;
+	}
+	&__left{
+		@include span(4);
 		line-height: 40px;
-		a{
-			color: $default;
-			text-decoration: underline;
-		}
     }
+	&__center{
+		@include span(4);
+		line-height: 40px;
+
+	}
+	&__right{
+		@include span(4 last);
+		line-height: 40px;
+	}
 	&__created-by{
 		display: inline-block;
 		position: absolute;

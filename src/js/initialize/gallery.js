@@ -10,7 +10,7 @@
 
 // Initialization
 	$(document).ready(function() {
-		$("a[rel^='prettyPhoto']").prettyPhoto({
+		$(".prettyPhoto").prettyPhoto({
 			hideflash:true
 		});
 	}); //lightbox gallery

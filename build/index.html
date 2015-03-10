@@ -21,12 +21,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=1130">
+	<meta name="viewport" content="width=1100">
 
 
 	<!-- Prioritize above the fold content (Critical path CSS) -->
 		<style>
-
+			.modal, .modal-window{visibility: hidden;}
 		</style>
 
 
@@ -48,11 +48,11 @@
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
 
 	<!-- Open Graph data for social media share -->
-		<meta property="og:title" content="ЭКСКЛЮЗИВ ДОМ СТРОЙ" />
+		<meta property="og:title" content="" />
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content="http://okna-almaty.com/" />
-		<meta property="og:image" content="http://okna-almaty.com/img/logo.png" />
-		<meta property="og:description" content="Производство и установка металопластиковых и алюминиевых изделий" />
+		<meta property="og:url" content="" />
+		<meta property="og:image" content="" />
+		<meta property="og:description" content="" />
 
 
 	<!-- Google Analytics -->
@@ -63,21 +63,21 @@
 <!-- Above the fold content (Critical path) -->
 
 	<!--================================================
-						#Header
+						#header
 	=================================================-->
 		<header class="header">
 			<div class="container">
 				<a class="header__logo" href=""><img src="img/logo.png" width="165" height="70" alt=""/></a>
 				<div class="header__phones">
 					<a class="header__phones-link" href="tel:+7 (727) 777 77 77">+7 (727) 777 77 77</a>
-					<a class="btn header__phones-btn jsModalTrigger" href="#jsModalForm">Заказать звонок</a>
+					<a class="btn header__phones-btn jsModalTrigger" data-target="jsModalForm">Заказать звонок</a>
 				</div>
 			</div>
 		</header><!-- /.header -->
 
 
 	<!--================================================
-						#Main
+						#main
 	=================================================-->
 		<main class="main">
 			<div class="container">
@@ -116,65 +116,63 @@
 
 
 <!--================================================
-					#Footer
+					#footer
 =================================================-->
 	<footer class="footer">
 		<div class="container">
-			<p class="footer__copy">&copy; 2015. CompanyName</p>
+			<div class="footer__left">&copy; 2015. CompanyName</div>
+			<div class="footer__center">
+				<h3>Contacts:</h3>
+				<p>Almaty city, Yablonevyi sad st. 11a</p>
+				<p><a href="tel:+7 777 777 77 77">+7 777 777 77 77</a></p>
+			</div>
+			<div class="footer__right">Another info</div>
 		</div><!-- /.container -->
-		<a class="footer__created-by" href="http://firstlead.kz"><img class="lazyload" data-src="img/created.svg" width="200" height="89" alt=""/></a>
+		<a class="footer__created-by" href="http://firstlead.kz"><img class="lazyload" data-src="img/created.png" width="200" height="89" alt=""/></a>
 	</footer><!-- /.footer -->
 
 <!--================================================
-					$Hidden part of page
+					#Hidden part of page
 ================================================-->
-	<!-- #Scroll Up Button -->
-		<div id="jsScrollTop" class="scroll-up"></div>
+<!-- #Scroll Up Button -->
+	<div id="jsScrollTop" class="scroll-up"></div>
 
-	<!-- #Callback modal window -->
-<!-- <div id="jsModalForm" class="modal-form">
-	<form class="form form--modal" id="jsForm_modal" action="admin/sendmail.php" method="post">
-		<h2 class="form__title">ОСТАВЬТЕ СВОИ КОНТАКТЫ</h2>
-		<p class="form__text">НАШИ МЕНЕДЖЕРЫ ПЕРЕЗВОНЯТ ВАМ<br> И ОТВЕТЯТ НА ВАШИ ВОПРОСЫ</p>
-		<div class="form__container">
-			<div class="form__errorbox">
-				<input type="text" class="form__input" name="Name" placeholder="Имя *" onfocus="if (this.placeholder=='Имя *') this.placeholder='' " onblur="if (this.placeholder==''){this.placeholder='Имя *'}">
-			</div>
-			<div class="form__errorbox">
-				<input class="form__input phone" name="Phone" placeholder="Телефон *" type="text">
-			</div>
-			<input type="text" class="form__input" name="Email" placeholder="Email" onfocus="if (this.placeholder=='Email') this.placeholder='' " onblur="if (this.placeholder==''){this.placeholder='Email'}">
+	<!-- #Callback modal form -->
+	<div id="jsModalForm" class="modal">
+		<div class="modal__overlay jsOverlay"></div>
+		<div class="modal__container">
+			<form class="form form--modal" id="jsForm_modal" action="admin/sendmail.php" method="post">
+				<h2 class="form__title">ОСТАВЬТЕ СВОИ КОНТАКТЫ</h2>
+				<p class="form__text">НАШИ МЕНЕДЖЕРЫ ПЕРЕЗВОНЯТ ВАМ<br> И ОТВЕТЯТ НА ВАШИ ВОПРОСЫ</p>
+				<div class="form__container">
+					<div class="form__errorbox">
+						<input type="text" class="form__input" name="Name" placeholder="Имя *" onfocus="if (this.placeholder=='Имя *') this.placeholder='' " onblur="if (this.placeholder==''){this.placeholder='Имя *'}">
+					</div>
+					<div class="form__errorbox">
+						<input class="form__input phone" name="Phone" placeholder="Телефон *" type="text">
+					</div>
+					<input type="text" class="form__input" name="Email" placeholder="Email" onfocus="if (this.placeholder=='Email') this.placeholder='' " onblur="if (this.placeholder==''){this.placeholder='Email'}">
 
-				<input type="hidden" id="js-subject" name="subject" value="Заявка на обратный звонок ">
-				<input type="hidden" id="js-from" name="from" value="ПОДАТЬ ЗАЯВКУ в шапке сайта ">
-				<input type="hidden" name="utm_source" value="<?php echo $utm_source; ?>">
-				<input type="hidden" name="type"       value="<?php echo $type; ?>">
-				<input type="hidden" name="source"     value="<?php echo $source; ?>">
-				<input type="hidden" name="keyword"    value="<?php echo $keyword; ?>">
+					<input type="hidden" id="jsSubject" name="subject" value="Заявка на обратный звонок ">
+					<input type="hidden" id="jsFrom" name="from" value="ПОДАТЬ ЗАЯВКУ в шапке сайта ">
+					<input type="hidden" name="utm_source" value="<?php echo $utm_source; ?>">
+					<input type="hidden" name="type"       value="<?php echo $type; ?>">
+					<input type="hidden" name="source"     value="<?php echo $source; ?>">
+					<input type="hidden" name="keyword"    value="<?php echo $keyword; ?>">
 
-			<button class="btn form--modal__btn">ОТПРАВИТЬ ЗАЯВКУ</button>
+					<button class="btn form--modal__btn">ОТПРАВИТЬ ЗАЯВКУ</button>
+				</div>
+			</form>
+			<button class="modal__close jsModalClose">&#10005;</button>
 		</div>
-	</form>
-</div>/#modal -->
-
-<div id="jsModalForm" class="modal">
-	<div class="modal__overlay jsOverlay"></div>
-	<div class="modal__container">
-		<p>Modal window text</p>
-		<button class="modal__close jsModalClose">&#10005;</button>
 	</div>
-</div>
 
-
-		<div id="jsPopup_1" class="popup">
-			<div class="popup__container">
-
-			</div>
+	<!-- #Modal window -->
+	<div id="jsModalWindow" class="modal-window">
+		<div id="jsModalWindowContainer" class="modal-window__contianer">
+			<button class="modal__close jsModalClose">&#10005;</button>
 		</div>
-
-		<div id="jsModalWindow" class="modal-window">
-			<div id="jsModalWindowContainer" class="modal-window__contianer"></div>
-		</div><!-- /#modal -->
+	</div>
 
 <!-- jQuery -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -186,7 +184,6 @@
 <!-- loadCSS: load a CSS file asynchronously -->
 	<div id="beyondTheFoldStyles"></div>
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic-ext,cyrillic"/>
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,cyrillic-ext"/>
 	<script>
 		function loadCSS( href, before, media ){
 			"use strict";
@@ -222,6 +219,7 @@
 
 	</script>
 
+<!-- Yandex.Metrika -->
 
 </body>
 </html>

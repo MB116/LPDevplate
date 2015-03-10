@@ -6,31 +6,9 @@
 // Home page: http://dimsemenov.com/plugins/magnific-popup/
 
 // Required plugins
-	require('../plugins/featherlight.js');
-	require('../plugins/jquery.validate.min.js');
 
 // Initialization
 	$(document).ready(function() {
-		/**************************************
-		 * MagnificPopup Initialize
-		 */
-
-			//$('.popup').magnificPopup({
-			//	type: 'inline',
-            //
-			//	fixedContentPos: true,
-			//	fixedBgPos: true,
-            //
-			//	overflowY: 'auto',
-            //
-			//	closeBtnInside: true,
-			//	preloader: false,
-			//
-			//	midClick: true,
-			//	removalDelay: 300,
-			//	mainClass: 'my-mfp-zoom-in'
-			//});
-
         /* This script supports IE9+ */
             (function() {
                 /* Opening modal window function */
@@ -41,7 +19,7 @@
                     /* Set onclick event handler for all trigger elements */
                     for(var i = 0; i < modalTrigger.length; i++) {
                         modalTrigger[i].onclick = function() {
-                            var target = this.getAttribute('href').substr(1);
+                            var target = this.getAttribute('data-target');
                             var modalWindow = document.getElementById(target);
 
                             modalWindow.classList ? modalWindow.classList.add('open') : modalWindow.className += ' ' + 'open';

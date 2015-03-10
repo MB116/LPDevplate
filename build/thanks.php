@@ -12,11 +12,13 @@
 
 	<!-- Include fonts -->
 		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&amp;subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>	
 	<!-- Include main styles -->
 		<link href="css/styles.min.css" rel="stylesheet">
 	
 	<style>
+		html, body{
+			height: 100%;
+		}
 		body{
 			background: url(img/main.jpg) center center no-repeat;
 			-webkit-background-size: cover;
@@ -25,6 +27,7 @@
 			padding-top: 50px;
 		}
 		.title{
+			color: #fff;
 			margin-bottom: 30px;}
 		.thanks{
 			width: 960px;
@@ -47,14 +50,16 @@
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
 
+	<!-- Google Analytics -->
 </head>
 <body>
-
-	<h1 class="title">СПАСИБО ВАША ЗАЯВКА УСПЕШНО ПРИНЯТА!</h1>
 	<main class="thanks">
+		<h1 class="title">СПАСИБО ВАША ЗАЯВКА УСПЕШНО ПРИНЯТА!</h1>
 		<h3>Спасибо ваша заявка успешно принята! <br> Наши вежливые операторы обязательно<br> перезвонят вам в ближайшее время<br> и ответят на все вопросы.<br><br> Благодарим за заявку!</h3>
 		<br><a href="/" class="btn">&#9664; ВЕРНУТЬСЯ НА ГЛАВНУЮ</a>
 	</main><!-- End main -->
+
+	<!-- Yandex Metrika -->
 
 </body>
 </html>
