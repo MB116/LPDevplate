@@ -359,13 +359,17 @@ $message = '
 //PHPMailer
 //***********************************************************
 	$mail            = new PHPMailer();
-	$mail->IsSMTP();
 	$mail->CharSet = 'UTF-8';
-	$mail->SMTPAuth  = true;
-	$mail->Host      = $from_server;
-	$mail->Port      = 25;         
-	$mail->Username  = $mailfrom;
-	$mail->Password  = $pass; 
+
+	if($is_smtp){
+		$mail->IsSMTP();
+		$mail->SMTPAuth  = true;
+		$mail->Host      = $from_server;
+		$mail->Port      = 25;
+		$mail->Username  = $mailfrom;
+		$mail->Password  = $pass;
+	}
+
 	// $mail->SMTPDebug  = 2; // enables SMTP debug information (for testing)
 
 	$mail->SetFrom($mailfrom, $mailfrom);
@@ -401,7 +405,7 @@ $message = '
 	if(!$mail->Send()) {
 		echo "Ошибка в передаче данных! Пожалуйста вернитесь назад и попробуйте заново.";
 	} else {
-		header("Location: ../thanks.php");
+		header('Location: '.$success_url);
 		exit;
 	}
     

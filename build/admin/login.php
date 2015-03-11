@@ -5,7 +5,7 @@ if( isset($_POST['login']) && isset($_POST['password']) ){
 	$login    = $_POST['login'];
 	$password = $_POST['password'];
 	$password = md5($password);
-	$match = md5('click2014');
+	$match = md5('click2015');
 
 	if($login === 'admin' && $password === $match){
 

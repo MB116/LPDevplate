@@ -15,6 +15,13 @@
 		$source     = $_GET['utm_campaign'];
 		$keyword    = "";
 	}
+
+
+	//Main page configuration
+
+	$title = "";
+	$description = "";
+	$url = $_SERVER['HTTP_HOST'];
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -26,13 +33,19 @@
 
 	<!-- Prioritize above the fold content (Critical path CSS) -->
 		<style>
-			.modal, .modal-window{visibility: hidden;}
+			* {box-sizing:border-box}
+			.modal, .modal-window{visibility:hidden}
+			.scroll-up{display: none;}
+			a, body, header, section {margin:0;padding:0;border:0;font-family:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;font-stretch:inherit;line-height:inherit;font-size:100%;vertical-align:baseline;}
+			html{line-height:1;}
+			body {min-width: 1100px;font-family:Arial,Verdana,'Helvetica Neue',sans-serif;font-size:16px;font-weight:400;line-height:1.2;color:#fff;background-color:#fff}
+			figcaption, figure, footer, header, main, nav, section{display:block}
 		</style>
 
 
 	<!-- SEO Info -->
-		<title></title>
-		<meta name="description" content="">
+		<title>$title</title>
+		<meta name="description" content="$description">
 		<meta name="keywords" content="">
 
 
@@ -48,11 +61,11 @@
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
 
 	<!-- Open Graph data for social media share -->
-		<meta property="og:title" content="" />
+		<meta property="og:title" content="$title" />
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content="" />
-		<meta property="og:image" content="" />
-		<meta property="og:description" content="" />
+		<meta property="og:url" content="$url" />
+		<meta property="og:image" content="img/logo.png" />
+		<meta property="og:description" content="$description" />
 
 
 	<!-- Google Analytics -->
@@ -93,8 +106,8 @@
 							<input class="form__input phone" name="Phone" placeholder="Телефон *" type="text">
 						</div>
 						<input type="text" class="form__input" name="Email" placeholder="Email" onfocus="if (this.placeholder=='Email') this.placeholder='' " onblur="if (this.placeholder==''){this.placeholder='Email'}">
-							<input type="hidden" id="js-subject" name="subject" value="Заявка на заказ">
-							<input type="hidden" id="js-from" name="from" value="ОТПРАВИТЬ ЗАЯВКУ в первом скроле ">
+							<input type="hidden" name="subject" value="Заявка на заказ">
+							<input type="hidden" name="from" value="ОТПРАВИТЬ ЗАЯВКУ в первом скроле ">
 							<input type="hidden" name="utm_source" value="<?php echo $utm_source; ?>">
 							<input type="hidden" name="type"       value="<?php echo $type; ?>">
 							<input type="hidden" name="source"     value="<?php echo $source; ?>">
@@ -111,7 +124,7 @@
 
 <!-- Other page markup -->
 
-
+<link rel="stylesheet" href="css/styles.min.css"/>
 
 
 
@@ -142,8 +155,8 @@
 		<div class="modal__overlay jsOverlay"></div>
 		<div class="modal__container">
 			<form class="form form--modal" id="jsForm_modal" action="admin/sendmail.php" method="post">
-				<h2 class="form__title">ОСТАВЬТЕ СВОИ КОНТАКТЫ</h2>
-				<p class="form__text">НАШИ МЕНЕДЖЕРЫ ПЕРЕЗВОНЯТ ВАМ<br> И ОТВЕТЯТ НА ВАШИ ВОПРОСЫ</p>
+				<h2 class="form__title" id="jsTitle">ОСТАВЬТЕ СВОИ КОНТАКТЫ</h2>
+				<p class="form__text" id="jsSubtitle">НАШИ МЕНЕДЖЕРЫ ПЕРЕЗВОНЯТ ВАМ<br> И ОТВЕТЯТ НА ВАШИ ВОПРОСЫ</p>
 				<div class="form__container">
 					<div class="form__errorbox">
 						<input type="text" class="form__input" name="Name" placeholder="Имя *" onfocus="if (this.placeholder=='Имя *') this.placeholder='' " onblur="if (this.placeholder==''){this.placeholder='Имя *'}">
@@ -169,8 +182,10 @@
 
 	<!-- #Modal window -->
 	<div id="jsModalWindow" class="modal-window">
+		<div class="modal-window__overlay jsOverlay"></div>
 		<div id="jsModalWindowContainer" class="modal-window__contianer">
-			<button class="modal__close jsModalClose">&#10005;</button>
+
+			<button class="modal-window__close jsModalClose">&#10005;</button>
 		</div>
 	</div>
 
@@ -182,42 +197,7 @@
 	<script src="js/scripts.min.js"></script>
 
 <!-- loadCSS: load a CSS file asynchronously -->
-	<div id="beyondTheFoldStyles"></div>
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic-ext,cyrillic"/>
-	<script>
-		function loadCSS( href, before, media ){
-			"use strict";
-			var ss = window.document.createElement( "link" );
-			var ref = before || window.document.getElementsByTagName( "script" )[ 0 ];
-			var sheets = window.document.styleSheets;
-			ss.rel = "stylesheet";
-			ss.href = href;
-			ss.media = "only x";
-			ref.parentNode.insertBefore( ss, ref );
-			function toggleMedia(){
-				var defined;
-				for( var i = 0; i < sheets.length; i++ ){
-					if( sheets[ i ].href && sheets[ i ].href.indexOf( href ) > -1 ){
-						defined = true;
-					}
-				}
-				if( defined ){
-					ss.media = media || "all";
-				}
-				else {
-					setTimeout( toggleMedia );
-				}
-			}
-			toggleMedia();
-			return ss;
-		}
-
-		//Load fullpage styles
-		loadCSS("css/styles.min.css", document.getElementById('beyondTheFoldStyles'));
-
-
-
-	</script>
 
 <!-- Yandex.Metrika -->
 

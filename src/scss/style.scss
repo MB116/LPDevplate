@@ -19,11 +19,11 @@
 	@import 'settings/default';
 	
 	//Base modules
-	@import 'modules/_btns';
-	@import 'modules/_form';
-	@import "modules/_modal";
-	@import 'modules/_scrollup';
-	@import 'modules/_sprites';
+	@import 'modules/btns';
+	@import 'modules/form';
+	@import "modules/modal";
+	@import 'modules/scrollup';
+	@import 'modules/sprites';
 //===================================================
 
 
@@ -35,6 +35,7 @@
 	@import 'parts/header'; 
 	@import 'parts/main';
 	@import 'parts/benefits';
+	@import 'parts/products';
 	@import 'parts/steps';
 	@import 'parts/testimonials';
 	@import 'parts/footer';
@@ -46,25 +47,13 @@
  * Plugins
  *
  */ 
-	// Animate.css
-		// @import "plugins/animate/default";
-		// @import "plugins/animate/fadeInUp";
-		// @import "plugins/animate/fadeIn";
-		// @import "plugins/animate/fadeOut";
-	
+	@import "plugins/reject"; //older browsers notification
+	@import "initialize/gallery";
+	@import "initialize/slider";
+	@import "initialize/timer";
 
-	@import "plugins/reject";
-//	@import "plugins/prettyPhoto";
-//	@import "plugins/bxSlider";
-//	@import "plugins/flipClock";
-//===================================================
-
-
-/*===================================================
- *
- * Plugins intialization
- *
- */ 
-//	@import "initialize/gallery";
-//	@import "initialize/slider";
-//	@import "initialize/timer";
+// Animate.css
+	// @import "plugins/animate/default";
+	// @import "plugins/animate/fadeInUp";
+	// @import "plugins/animate/fadeIn";
+	// @import "plugins/animate/fadeOut";

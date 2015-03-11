@@ -1,7 +1,7 @@
 <?php
 	//DB initialize
 	require_once "initialize.php";
-	$match = md5('click2014');
+	$match = md5('click2015');
 	$error = false;
 ?>
 <!DOCTYPE html>

@@ -1,738 +1,92 @@
-/*-------------------------------------------------*\
-	  Configuration file for all website styles
-\*-------------------------------------------------*/
-/*===================================================
- *
- * $Custom imports
- *
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Ruby193\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-core-1\.1\.0\.alpha\.3\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\000035}}
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Ruby193\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-core-1\.1\.0\.alpha\.3\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\0000322}}
-html {
-  line-height: 1;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Ruby193\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-core-1\.1\.0\.alpha\.3\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\0000324}}
-ol, ul {
-  list-style: none;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Ruby193\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-core-1\.1\.0\.alpha\.3\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\0000326}}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Ruby193\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-core-1\.1\.0\.alpha\.3\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\0000328}}
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Ruby193\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-core-1\.1\.0\.alpha\.3\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\0000330}}
-q, blockquote {
-  quotes: none;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Ruby193\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-core-1\.1\.0\.alpha\.3\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\00003103}}
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Ruby193\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-core-1\.1\.0\.alpha\.3\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\0000332}}
-a img {
-  border: none;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Ruby193\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-core-1\.1\.0\.alpha\.3\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\00003116}}
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-  display: block;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/settings\/_grids\.scss}line{font-family:\0000365}}
-.container {
-  max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Ruby193\/lib\/ruby\/gems\/1\.9\.1\/gems\/susy-2\.2\.1\/sass\/susy\/output\/support\/_clearfix\.scss}line{font-family:\0000312}}
-.container:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
-/**
- *
- *	All button variables of website
- *
- */
-/**
- *
- * Page mixins
- *
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/settings\/_mixins\.scss}line{font-family:\000039}}
-.container:after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  clear: both;
-}
-
-/**
- *
- * $Default styles
- *
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/settings\/_default\.scss}line{font-family:\000036}}
-* {
-  box-sizing: border-box;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/settings\/_default\.scss}line{font-family:\000038}}
-body {
-  min-width: 1130px;
-  font-family: "PT Sans Narrow", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.2;
-  color: #6c6966;
-  background-color: #fff;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/settings\/_default\.scss}line{font-family:\0000318}}
-section {
-  padding: 30px 0;
-  background-position: center top;
-  background-repeat: no-repeat;
-  text-align: center;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/settings\/_default\.scss}line{font-family:\0000325}}
-a {
-  text-decoration: none;
-  color: #fff;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/settings\/_default\.scss}line{font-family:\0000329}}
-a:hover {
-  color: #fff;
-}
-
-/**
- *
- * $Default classes
- *
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/settings\/_default\.scss}line{font-family:\0000339}}
-.container {
-  position: relative;
-  height: 100%;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/settings\/_default\.scss}line{font-family:\0000345}}
-.clear {
-  clear: both;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/settings\/_default\.scss}line{font-family:\0000347}}
-.title {
-  margin-bottom: 30px;
-  font-size: 36px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: bold;
-  color: #6c6966;
-  text-align: center;
-  text-transform: uppercase;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/settings\/_default\.scss}line{font-family:\0000356}}
-.title--primary {
-  color: #6c6966;
-}
-
-/**
- *
- *	All button setting of website
- *
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/modules\/_btns\.scss}line{font-family:\000037}}
-button {
-  border: none;
-  background-color: transparent;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/modules\/_btns\.scss}line{font-family:\0000311}}
-.btn {
-  position: relative;
-  padding: 5px 30px;
-  display: inline-block;
-  color: #fff;
-  font-family: "PT Sans Narrow", sans-serif;
-  font-size: 20px;
-  font-weight: normal;
-  text-align: center;
-  text-transform: uppercase;
-  line-height: 1.5;
-  cursor: pointer;
-  transition: background 0.5s ease;
-  background: #cd574d;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/modules\/_btns\.scss}line{font-family:\0000327}}
-.btn:hover {
-  background: #a0362d;
-  color: #fff;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/modules\/_btns\.scss}line{font-family:\0000332}}
-.btn:active {
-  box-shadow: inset 0 2px 3px #000;
-  text-shadow: none;
-}
-
-/**
- *
- * $Form
- *
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/modules\/_form\.scss}line{font-family:\000037}}
-.form {
-  background-color: #fff;
-  color: #6c6966;
-  padding: 20px 0;
-  box-shadow: 0 0 5px #000;
-  text-align: center;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/modules\/_form\.scss}line{font-family:\0000315}}
-.form__container {
-  padding: 0 30px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/modules\/_form\.scss}line{font-family:\0000320}}
-.form__title {
-  font-size: 28px;
-  font-weight: normal;
-  text-transform: uppercase;
-  line-height: 1.2;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/modules\/_form\.scss}line{font-family:\0000328}}
-.form__text {
-  margin-bottom: 10px;
-  font-size: 18px;
-  line-height: 1;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/modules\/_form\.scss}line{font-family:\0000335}}
-.form__input {
-  display: inline-block;
-  width: 100%;
-  height: 40px;
-  margin-bottom: 15px;
-  padding: 0 10px;
-  border: 1px solid #c3c3c3;
-  outline: 0;
-  background-color: #e8e8e8;
-  color: #000;
-  font-family: "PT Sans Narrow", sans-serif;
-  font-size: 18px;
-  font-weight: normal;
-  text-align: left;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/modules\/_form\.scss}line{font-family:\0000350}}
-.form__input::-webkit-input-placeholder {
-  font-family: "PT Sans Narrow", sans-serif;
-  font-size: 18px;
-  text-transform: none;
-  color: #000;
-  text-align: left;
-  font-weight: 300;
-  height: 40px;
-  opacity: 1;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/modules\/_form\.scss}line{font-family:\0000361}}
-.form__input:-moz-placeholder {
-  font-family: "PT Sans Narrow", sans-serif;
-  font-size: 18px;
-  text-transform: none;
-  color: #000;
-  text-align: left;
-  font-weight: 300;
-  height: 40px;
-  opacity: 1;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/modules\/_form\.scss}line{font-family:\0000372}}
-.form__input::-moz-placeholder {
-  font-family: "PT Sans Narrow", sans-serif;
-  font-size: 18px;
-  text-transform: none;
-  color: #000;
-  text-align: left;
-  font-weight: 300;
-  height: 40px;
-  opacity: 1;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/modules\/_form\.scss}line{font-family:\0000383}}
-.form__input.error {
-  background-color: #ffe5e5;
-  border: 1px solid #f00;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/modules\/_form\.scss}line{font-family:\0000390}}
-.form__errorbox {
-  position: relative;
-  display: block;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/modules\/_form\.scss}line{font-family:\0000396}}
-.form label {
-  font-size: 11px;
-  font-weight: normal;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/modules\/_form\.scss}line{font-family:\00003100}}
-.form label.error {
-  position: absolute;
-  display: inline-block;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  margin: -15px 0 0;
-  color: #f00;
-  font-family: Arial, sans-serif;
-  font-size: 10px;
-  text-align: center;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/modules\/_form\.scss}line{font-family:\00003115}}
-.form__btn {
-  width: 100%;
-  height: 48px;
-  margin-top: 15px;
-  padding: 0 20px;
-}
-
-/**
- *
- * Popup plugin styles
- *
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/modules\/_modal\.scss}line{font-family:\000036}}
-.modal, .modal-window {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 20;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  opacity: 0;
-  visibility: hidden;
-  transition: visibility 0s linear 0.1s,opacity 0.3s ease;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/modules\/_modal\.scss}line{font-family:\0000321}}
-.modal.open, .modal-window.open {
-  visibility: visible;
-  opacity: 1;
-  transition-delay: 0s;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/modules\/_modal\.scss}line{font-family:\0000327}}
-.modal__overlay, .modal-window__overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 21;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/modules\/_modal\.scss}line{font-family:\0000337}}
-.modal__close, .modal-window__close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  border: none;
-  outline: none;
-  background: none;
-  font-size: 24px;
-  color: #747474;
-  font-weight: bold;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/modules\/_modal\.scss}line{font-family:\0000348}}
-.modal__close:hover, .modal-window__close:hover {
-  color: #000;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/modules\/_modal\.scss}line{font-family:\0000353}}
-.modal__container, .modal-window__container {
-  position: relative;
-  z-index: 22;
-  width: 400px;
-  top: 50%;
-  transform: translateY(-50%);
-  box-shadow: 0 0 10px #fff;
-  margin: 0 auto;
-  padding: 30px;
-  background-color: #fff;
-  text-align: center;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/modules\/_modal\.scss}line{font-family:\0000365}}
-.modal__container form, .modal-window__container form {
-  background: none;
-  box-shadow: none;
-}
-
-/**
- *
- * Scroll up btn
- *
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/modules\/_scrollup\.scss}line{font-family:\000036}}
-.scroll-up {
-  position: fixed;
-  display: none;
-  right: 50px;
-  bottom: 50px;
-  z-index: 999;
-  height: 64px;
-  width: 64px;
-  background-position: 0 0;
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAQAAAAAYLlVAAACOElEQVR4Ae3YTyhsYRjH8e/MmfE/hCQ3iWJhigULumaKDRs2bGRhZ2VnaWdnZ2enRFGaBUJTE3Wvu7CxsbCwsNBNKSX5z4xb6uZ5aiYzc94zs3k/szvneX7vrzNndXwUmN8WsAVsAVvAFrAFsAXcaaYZV3y48YNfQIS/hXkCDRzQSisHNBSiQB1x2gFoJ05dvgvUECfEfyHi1OSzQBUxupC6iFGVrwIV7NMDaD3sU5GPAmXs0kcqfexS5nWBEraJ8GWFFb5E2KYEDxWxx4f4rePgsK6u7VGER4JsqaOiBAAIEFXXtwjiAYdNdcwOQVFtR93bxMEwP2vqiBjFSMXE1P01/BjkY1nFH1KKBqUcqpllfBizpKKPKCeVco7U3BKGLKrYYypJp5JjNbuIAQsq8oRqNK2aEzW/gEvzKu6UWr5Ty6namceFORV1Rj2ZqOdM7c2Ro1kVc04jmWrkXO3OkoMZFXFBE9lo4kLtz5ClaZJi/ZIWstXCpUhIMk0WptTxV7SRizauVIUpMjRBQixe00GuOrgWSQkmyMAYb2Lphk7c6ORGpL0xxjdGeBULt3TjVje3IvGVEUhviGcxfEcvJvRyJ1KfGSKNAR7F4ANhTAnzIJIfGSCFfu7F0BODmDTIk0i/px+0kHpMLwxj2jAv6u8NoQSJihdlFC+Mihc8ShC0ABuft94ZxyvjvH+esUGAFBxWSTCJlyZJsIqT7vuAn5/8xlth/pBUBQrLfqSyBWwBW8AWsAVsgX8+G2JOlm6m8AAAAABJRU5ErkJgggbd454453c73ed74351fdf2ce84a17ff5");
-  cursor: pointer;
-  opacity: 0.7;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/modules\/_scrollup\.scss}line{font-family:\0000319}}
-.scroll-up:hover {
-  opacity: 1;
-}
-
-@media screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/modules\/_scrollup\.scss}line{font-family:\0000324}}
-  .scroll-up {
-    display: none !important;
-  }
-}
-/**
- *
- * Page sprites
- *
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/modules\/_sprites\.scss}line{font-family:\000037}}
-.header__phones > i,
-.footer__icon {
-  background-image: url(../../img/sprite.png);
-  background-repeat: no-repeat;
-}
-
-/*===================================================
- *
- * $Page sections
- *
- */
-/*-------------------------------------------------*\
-					$Header
-\*-------------------------------------------------*/
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/parts\/_header\.scss}line{font-family:\000034}}
-.header {
-  height: 100px;
-  background-color: #78909C;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/parts\/_header\.scss}line{font-family:\000038}}
-.header__logo {
-  display: inline-block;
-  float: left;
-  padding-top: 15px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/parts\/_header\.scss}line{font-family:\0000314}}
-.header__phones {
-  width: 20.32258%;
-  float: right;
-  margin-right: 0;
-  position: relative;
-  padding-top: 10px;
-  text-align: center;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/parts\/_header\.scss}line{font-family:\0000320}}
-.header__phones-link {
-  font-size: 20px;
-  display: block;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/parts\/_header\.scss}line{font-family:\0000324}}
-.header__phones-btn {
-  padding: 5px 20px;
-  margin-top: 5px;
-}
-
-/* End .header */
-@media screen and (max-width: 1150px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/parts\/_header\.scss}line{font-family:\0000379}}
-  .header--sticky {
-    display: none;
-  }
-}
-/*-------------------------------------------------*\
-					$Main
-\*-------------------------------------------------*/
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/parts\/_main\.scss}line{font-family:\000034}}
-.main {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  text-align: center;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/parts\/_main\.scss}line{font-family:\000039}}
-.main__title {
-  margin-bottom: 0;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/parts\/_main\.scss}line{font-family:\0000313}}
-.main__subtitle {
-  margin-bottom: 30px;
-  font-size: 30px;
-  font-weight: bold;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/parts\/_main\.scss}line{font-family:\0000320}}
-.main__form {
-  width: 32.90323%;
-  float: right;
-  margin-right: 0;
-}
-
-/* End .main */
-/*-------------------------------------------------*\
-     #Benefits
-\*-------------------------------------------------*/
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/parts\/_benefits\.scss}line{font-family:\000037}}
-.benefits__title {
-  margin-bottom: 75px;
-}
-
-/* End .benefits */
-/*-------------------------------------------------*\
-     $Steps
-\*-------------------------------------------------*/
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/parts\/_steps\.scss}line{font-family:\000036}}
-.steps__title {
-  margin-bottom: 50px;
-}
-
-/* End .steps */
-/*-------------------------------------------------*\
-     $Testimonials
-\*-------------------------------------------------*/
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/parts\/_testimonials\.scss}line{font-family:\000034}}
-.testimonials {
-  padding-bottom: 80px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/parts\/_testimonials\.scss}line{font-family:\000037}}
-.testimonials__title {
-  margin-bottom: 50px;
-}
-
-/* End .testimonials */
-/*-------------------------------------------------*\
-					$Footer
-\*-------------------------------------------------*/
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/parts\/_footer\.scss}line{font-family:\000034}}
-.footer {
-  position: relative;
-  padding: 20px 0 100px;
-  background-color: #78909C;
-  color: #fff;
-  font-size: 18px;
-  text-align: center;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/parts\/_footer\.scss}line{font-family:\0000312}}
-.footer h3 {
-  font-size: 24px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/parts\/_footer\.scss}line{font-family:\0000316}}
-.footer a {
-  color: #fff;
-  text-decoration: underline;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/parts\/_footer\.scss}line{font-family:\0000320}}
-.footer__left {
-  width: 32.90323%;
-  float: left;
-  margin-right: 0.64516%;
-  line-height: 40px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/parts\/_footer\.scss}line{font-family:\0000324}}
-.footer__center {
-  width: 32.90323%;
-  float: left;
-  margin-right: 0.64516%;
-  line-height: 40px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/parts\/_footer\.scss}line{font-family:\0000329}}
-.footer__right {
-  width: 32.90323%;
-  float: right;
-  margin-right: 0;
-  line-height: 40px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/parts\/_footer\.scss}line{font-family:\0000333}}
-.footer__created-by {
-  display: inline-block;
-  position: absolute;
-  left: 50%;
-  height: 89px;
-  bottom: 0;
-  transform: translateX(-50%);
-}
-
-/* End .footer */
-/*===================================================
- *
- * Plugins
- *
- */
 /*
- * jReject (jQuery Browser Rejection Plugin)
- * Version 1.1.0
- * URL: http://jreject.turnwheel.com/
- * Description: jReject is a easy method of rejecting specific browsers on your site
- * Author: Steven Bower (TurnWheel Designs) http://turnwheel.com/
- * Copyright: Copyright (c) 2009-2014 Steven Bower under dual MIT/GPL license.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/plugins\/_reject\.scss}line{font-family:\0000310}}
-#jr_overlay {
-  top: 0;
-  left: 0;
-  padding: 0;
-  margin: 0;
-  z-index: 2147483646;
-  position: absolute;
-}
+Error: Undefined variable: "$orange".
+        on line 15 of d:/OpenServer/domains/LPDevplate/src/scss/initialize/_slider.scss
+        from line 51 of d:/OpenServer/domains/LPDevplate/src/scss/style.scss
 
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/plugins\/_reject\.scss}line{font-family:\0000319}}
-#jr_wrap {
-  position: absolute;
-  width: 100%;
-  z-index: 2147483647;
-  padding: 0;
-  margin: 0;
-}
+10:  * $Custom imports
+11:  *
+12:  *\/
+13:  	//Base settings
+14: 	@import 'compass/reset';
+15: 	@import 'settings/fonts';
+16: 	@import 'settings/grids';
+17: 	@import 'settings/colors';
+18: 	@import 'settings/mixins';
+19: 	@import 'settings/default';
+20: 	
 
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/plugins\/_reject\.scss}line{font-family:\0000327}}
-#jr_inner {
-  font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
-  font-size: 12px;
-  background: #FFF;
-  border: 1px solid #CCC;
-  color: #4F4F4F;
-  margin: 0 auto;
-  height: auto;
-  padding: 20px;
-  position: relative;
-  box-sizing: content-box;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/plugins\/_reject\.scss}line{font-family:\0000340}}
-#jr_header {
-  display: block;
-  color: #333;
-  padding: 5px;
-  padding-bottom: 0;
-  margin: 0;
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: bold;
-  font-size: 1.3em;
-  margin-bottom: 0.5em;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/plugins\/_reject\.scss}line{font-family:\0000352}}
-#jr_inner p {
-  padding: 5px;
-  margin: 0;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/plugins\/_reject\.scss}line{font-family:\0000357}}
-#jr_inner ul {
-  list-style-image: none;
-  list-style-position: outside;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/plugins\/_reject\.scss}line{font-family:\0000365}}
-#jr_inner ul li {
-  cursor: pointer;
-  float: left;
-  width: 120px;
-  height: 122px;
-  margin: 0 10px 10px 10px;
-  padding: 0;
-  text-align: center;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/plugins\/_reject\.scss}line{font-family:\0000375}}
-#jr_inner li a {
-  color: #333;
-  font-size: 0.8em;
-  text-decoration: none;
-  padding: 0;
-  margin: 0;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/plugins\/_reject\.scss}line{font-family:\0000383}}
-#jr_inner li a:hover {
-  text-decoration: underline;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/plugins\/_reject\.scss}line{font-family:\0000387}}
-#jr_inner .jr_icon {
-  width: 100px;
-  height: 100px;
-  margin: 1px auto;
-  padding: 0;
-  background: transparent no-repeat scroll left top;
-  cursor: pointer;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/plugins\/_reject\.scss}line{font-family:\0000396}}
-#jr_close {
-  clear: both;
-  padding: 0;
-  margin: 0;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/plugins\/_reject\.scss}line{font-family:\00003102}}
-#jr_close a {
-  color: #f00;
-  display: block;
-  width: auto;
-  margin: 0;
-  padding: 0;
-  text-decoration: underline;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/OpenServer\/domains\/LPDevplate\/src\/scss\/plugins\/_reject\.scss}line{font-family:\00003111}}
-#jr_close p {
-  padding: 10px 0 0 0;
-  margin: 0;
-}
-
-/*===================================================
- *
- * Plugins intialization
- *
- */
-
-/*# sourceMappingURL=style.css.map */
+Backtrace:
+d:/OpenServer/domains/LPDevplate/src/scss/initialize/_slider.scss:15
+d:/OpenServer/domains/LPDevplate/src/scss/style.scss:51
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/script/tree/variable.rb:49:in `_perform'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/script/tree/node.rb:50:in `perform'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/script/tree/list_literal.rb:62:in `block in _perform'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/script/tree/list_literal.rb:62:in `map'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/script/tree/list_literal.rb:62:in `_perform'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/script/tree/node.rb:50:in `perform'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/tree/visitors/perform.rb:394:in `visit_prop'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/tree/visitors/perform.rb:430:in `block (2 levels) in visit_rule'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/tree/visitors/perform.rb:430:in `map'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/tree/visitors/perform.rb:430:in `block in visit_rule'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/tree/visitors/perform.rb:428:in `visit_rule'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/tree/visitors/perform.rb:325:in `block (2 levels) in visit_import'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/tree/visitors/perform.rb:325:in `map'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/tree/visitors/perform.rb:325:in `block in visit_import'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/stack.rb:88:in `block in with_import'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/stack.rb:88:in `with_import'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/tree/visitors/perform.rb:322:in `visit_import'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/tree/visitors/perform.rb:157:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/tree/visitors/perform.rb:8:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/engine.rb:285:in `render_with_sourcemap'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.10/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-1.1.0.alpha.3/lib/compass/sass_compiler.rb:40:in `compile!'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-1.1.0.alpha.3/lib/compass/commands/update_project.rb:49:in `perform'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-1.1.0.alpha.3/lib/compass/commands/base.rb:18:in `execute'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-1.1.0.alpha.3/lib/compass/commands/project_base.rb:19:in `execute'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-1.1.0.alpha.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-1.1.0.alpha.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-1.1.0.alpha.3/bin/compass:30:in `block in <top (required)>'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-1.1.0.alpha.3/bin/compass:44:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-1.1.0.alpha.3/bin/compass:44:in `<top (required)>'
+C:/Ruby193/bin/compass:23:in `load'
+C:/Ruby193/bin/compass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$orange\".\A         on line 15 of d:/OpenServer/domains/LPDevplate/src/scss/initialize/_slider.scss\A         from line 51 of d:/OpenServer/domains/LPDevplate/src/scss/style.scss\A \A 10:  * $Custom imports\A 11:  *\A 12:  */\A 13:  	//Base settings\A 14: 	@import 'compass/reset';\A 15: 	@import 'settings/fonts';\A 16: 	@import 'settings/grids';\A 17: 	@import 'settings/colors';\A 18: 	@import 'settings/mixins';\A 19: 	@import 'settings/default';\A 20: 	"; }
