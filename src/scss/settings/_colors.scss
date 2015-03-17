@@ -4,25 +4,28 @@
  *
  */
 
-
-//Backgrounds
-$body:#fff;
-$headerBg: #78909C;
-$footerBg: #78909C;
-
 //Primary colors
 $default:#fff;
 $primary:#000;
+$main:   #78909C;
+$accent: #cd574d;
+$title:  #6c6966;
+$text:   #6c6966;
+$error:  #f00;
+
+//Backgrounds
+$body:     $default;
+$headerBg: $main;
+$footerBg: $main;
+
 
 //Elements colors
-$btn: #cd574d;
-$title: #6c6966;
-$text: #6c6966;
-$link: #fff;
-$error:#f00;
+$btn:   $accent;
+$link:  $default;
+
 
 //Forms colors
-$formBg: #fff;
+$formBg: $default;
 $formBdr: rgba(#a2a2a2, 0.6);
 $inputBg: #e8e8e8;
 $inputBdr: #c3c3c3;

@@ -1,8 +1,6 @@
 <?php
 //DB initialize
 	require_once "initialize.php";
-//Settings file
-	require_once "config.php";
 //Excel export file
 	require_once "libs/PHPExcel.php";
 

@@ -1,8 +1,6 @@
 <?php
 //Database class include
 	include_once 'initialize.php';
-//Settings include
-	include_once 'config.php';
 //Mail sender class include
 	include_once 'libs/phpmailer/class.phpmailer.php';
 
@@ -367,7 +365,7 @@ $message = '
 		$mail->Host      = $from_server;
 		$mail->Port      = 25;
 		$mail->Username  = $mailfrom;
-		$mail->Password  = $pass;
+		$mail->Password  = $mailpassword;
 	}
 
 	// $mail->SMTPDebug  = 2; // enables SMTP debug information (for testing)

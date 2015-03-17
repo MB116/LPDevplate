@@ -1,5 +1,6 @@
 <?php
 //Database class include
+include_once '../config.php';
 include_once 'database.php';
 
 //***********************************************************

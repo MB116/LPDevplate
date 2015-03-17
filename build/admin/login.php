@@ -1,11 +1,12 @@
 <?php
+include_once "../config.php";
 
 if( isset($_POST['login']) && isset($_POST['password']) ){
 
 	$login    = $_POST['login'];
 	$password = $_POST['password'];
 	$password = md5($password);
-	$match = md5('click2015');
+	$match    = md5($admin_password);
 
 	if($login === 'admin' && $password === $match){
 

@@ -1,4 +1,9 @@
 <?php
+	//Main page configuration
+	include_once "config.php";
+	$url = $_SERVER['HTTP_HOST'];
+
+	//UTM
 	if($_GET['utm_source'] === "yandex"){
 		$utm_source = $_GET['utm_source'];
 		$type       = $_GET['type'];
@@ -15,13 +20,6 @@
 		$source     = $_GET['utm_campaign'];
 		$keyword    = "";
 	}
-
-
-	//Main page configuration
-
-	$title = "";
-	$description = "";
-	$url = $_SERVER['HTTP_HOST'];
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -44,8 +42,8 @@
 
 
 	<!-- SEO Info -->
-		<title>$title</title>
-		<meta name="description" content="$description">
+		<title><?=$title; ?></title>
+		<meta name="description" content="<?=$description; ?>">
 		<meta name="keywords" content="">
 
 
@@ -61,11 +59,11 @@
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
 
 	<!-- Open Graph data for social media share -->
-		<meta property="og:title" content="$title" />
+		<meta property="og:title" content="<?=$title; ?>" />
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content="$url" />
+		<meta property="og:url" content="<?=$url; ?>" />
 		<meta property="og:image" content="img/logo.png" />
-		<meta property="og:description" content="$description" />
+		<meta property="og:description" content="<?=$description; ?>" />
 
 
 	<!-- Google Analytics -->
@@ -83,7 +81,15 @@
 				<a class="header__logo" href=""><img src="img/logo.png" width="165" height="70" alt=""/></a>
 				<div class="header__phones">
 					<a class="header__phones-link" href="tel:+7 (727) 777 77 77">+7 (727) 777 77 77</a>
-					<a class="btn header__phones-btn jsModalTrigger" data-target="jsModalForm">Заказать звонок</a>
+					<a class="btn header__phones-btn jsModalTrigger"
+					   data-target="jsModalForm"
+					   data-title="Текст 1"
+					   data-subtitle="Текст 2"
+					   data-text="Текст 3"
+					   data-subject="Текст 4"
+					   data-from="Текст 5"
+					   data-btn="Текст 6"
+											>Заказать звонок</a>
 				</div>
 			</div>
 		</header><!-- /.header -->
@@ -152,11 +158,11 @@
 
 	<!-- #Callback modal form -->
 	<div id="jsModalForm" class="modal">
-		<div class="modal__overlay jsOverlay"></div>
+		<div class="modal__overlay jsModalOverlay"></div>
 		<div class="modal__container">
 			<form class="form form--modal" id="jsForm_modal" action="admin/sendmail.php" method="post">
-				<h2 class="form__title" id="jsTitle">ОСТАВЬТЕ СВОИ КОНТАКТЫ</h2>
-				<p class="form__text" id="jsSubtitle">НАШИ МЕНЕДЖЕРЫ ПЕРЕЗВОНЯТ ВАМ<br> И ОТВЕТЯТ НА ВАШИ ВОПРОСЫ</p>
+				<h2 class="form__title" id="jsModalTitle">ОСТАВЬТЕ СВОИ КОНТАКТЫ</h2>
+				<p class="form__text" id="jsModalSubtitle">НАШИ МЕНЕДЖЕРЫ ПЕРЕЗВОНЯТ ВАМ<br> И ОТВЕТЯТ НА ВАШИ ВОПРОСЫ</p>
 				<div class="form__container">
 					<div class="form__errorbox">
 						<input type="text" class="form__input" name="Name" placeholder="Имя *" onfocus="if (this.placeholder=='Имя *') this.placeholder='' " onblur="if (this.placeholder==''){this.placeholder='Имя *'}">
@@ -166,14 +172,14 @@
 					</div>
 					<input type="text" class="form__input" name="Email" placeholder="Email" onfocus="if (this.placeholder=='Email') this.placeholder='' " onblur="if (this.placeholder==''){this.placeholder='Email'}">
 
-					<input type="hidden" id="jsSubject" name="subject" value="Заявка на обратный звонок ">
-					<input type="hidden" id="jsFrom" name="from" value="ПОДАТЬ ЗАЯВКУ в шапке сайта ">
+					<input type="hidden" id="jsModalSubject" name="subject" value="Заявка на обратный звонок ">
+					<input type="hidden" id="jsModalFrom"    name="from" value="ПОДАТЬ ЗАЯВКУ в шапке сайта ">
 					<input type="hidden" name="utm_source" value="<?php echo $utm_source; ?>">
 					<input type="hidden" name="type"       value="<?php echo $type; ?>">
 					<input type="hidden" name="source"     value="<?php echo $source; ?>">
 					<input type="hidden" name="keyword"    value="<?php echo $keyword; ?>">
 
-					<button class="btn form--modal__btn">ОТПРАВИТЬ ЗАЯВКУ</button>
+					<button class="btn form--modal__btn" id="jsModalBtn">ОТПРАВИТЬ ЗАЯВКУ</button>
 				</div>
 			</form>
 			<button class="modal__close jsModalClose">&#10005;</button>
@@ -182,8 +188,8 @@
 
 	<!-- #Modal window -->
 	<div id="jsModalWindow" class="modal-window">
-		<div class="modal-window__overlay jsOverlay"></div>
-		<div id="jsModalWindowContainer" class="modal-window__contianer">
+		<div class="modal-window__overlay jsModalOverlay"></div>
+		<div id="jsModalWindowContainer" class="modal-window__container">
 
 			<button class="modal-window__close jsModalClose">&#10005;</button>
 		</div>

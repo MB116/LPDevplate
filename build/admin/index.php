@@ -1,7 +1,7 @@
 <?php
 	//DB initialize
 	require_once "initialize.php";
-	$match = md5('click2015');
+	$match = md5($admin_password);
 	$error = false;
 ?>
 <!DOCTYPE html>

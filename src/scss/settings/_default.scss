@@ -24,10 +24,10 @@
 	
 	a {
 		text-decoration: none;
-		color: $link;
+		color: inherit;
 
 		&:hover{
-			color: $link;
+			color: inherit;
 		}
 	}
 

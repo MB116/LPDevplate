@@ -47,13 +47,10 @@
  * Plugins
  *
  */ 
-	@import "plugins/reject"; //older browsers notification
-	@import "initialize/gallery";
-	@import "initialize/slider";
-	@import "initialize/timer";
+	@import "plugins/vendor/reject"; //older browsers notification
+//	@import "plugins/gallery";
+//	@import "plugins/slider";
+//	@import "plugins/timer";
+//	@import "plugins/animate";
 
-// Animate.css
-	// @import "plugins/animate/default";
-	// @import "plugins/animate/fadeInUp";
-	// @import "plugins/animate/fadeIn";
-	// @import "plugins/animate/fadeOut";
+
