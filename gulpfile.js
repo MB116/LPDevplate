@@ -1,37 +1,38 @@
 /************************************************
 	INCLUDE PLUGINS
 ************************************************/
-	var gulp       = require('gulp');
-	var compass    = require('gulp-compass');
-	var uglify     = require('gulp-uglify');
-	var concat     = require('gulp-concat');
-	var browserify = require('browserify');
-	var source     = require('vinyl-source-stream');
-	var streamify  = require('gulp-streamify');
-	var plumber    = require('gulp-plumber');
-	var minifycss  = require('gulp-cssmin');
-	var notify     = require('gulp-notify');
-	var autoprefix = require('gulp-autoprefixer');
-	var connect    = require('gulp-connect');
-	var rename     = require("gulp-rename");
+	var gulp        = require('gulp');
+	//var compass     = require('gulp-compass');
+    var sass        = require('gulp-sass');
+    var sourcemaps  = require('gulp-sourcemaps');
+	var uglify      = require('gulp-uglify');
+	var concat      = require('gulp-concat');
+	var browserify  = require('browserify');
+	var source      = require('vinyl-source-stream');
+	var streamify   = require('gulp-streamify');
+	var minifycss   = require('gulp-cssmin');
+	var notify      = require('gulp-notify');
+	var autoprefix  = require('gulp-autoprefixer');
+	var connect     = require('gulp-connect-php');
+	var imagemin    = require('gulp-imagemin');
+	var rename      = require("gulp-rename");
+	var browserSync = require('browser-sync');
+
 
 /************************************************
 	PATH VARIABLES
 ************************************************/
-	var htmlSrc      = './build/index.html';
-	var htmlWatch    = './build/index.html';
+	var phpSrc       = './build/**/*.php';
 
 	var stylesSrc    = './src/scss/**/*.scss';
 	var stylesDest   = './build/css';
-	var stylesWatch  = './src/scss/**/*.scss';
 
 	var scriptsSrc   = './src/js/index';
 	var scriptsDest  = './build/js';
 	var scriptsWatch = './src/js/**/*.js';
 
-	var imgSrc       = 'src/img/**/*';
-	var imgDest      = 'build/img';
-	var imgWatch     = './src/img/**/*';
+	var imgSrc       = './src/img/**/*';
+	var imgDest      = './build/img';
 
 
 /************************************************
@@ -43,12 +44,18 @@
 	}
 
 /************************************************
-	HTML
+	PHP SERVER
 ************************************************/
-	gulp.task('html', function() {
-		return gulp.src(htmlSrc)
-			.pipe(connect.reload())
-			.pipe(notify('HTML changed!'));
+	gulp.task('phpServer', function() {
+		connect.server({
+			bin: 'C:/MAMP/bin/php/php5.6.3/php.exe',
+			ini: 'C:/MAMP/conf/php5.6.3/php.ini',
+			base: './build'
+		}, function (){
+			browserSync({
+				proxy: 'localhost:8000'
+			});
+		});
 	});
 
 /************************************************
@@ -56,20 +63,28 @@
 ************************************************/
 	gulp.task('styles', function() {
 		return gulp.src(stylesSrc)
-				.pipe(plumber())
-				.pipe(compass({
-					config_file: './config.rb',
-					css: 'build/css',
-					sass: 'src/scss/',
-					debug : true,
-					sourcemap: true,
-					comments: false
-				}))
+				//.pipe(compass({
+				//	config_file: './config.rb',
+				//	css: stylesDest,
+				//	sass: 'src/scss/',
+				//	debug : true,
+				//	sourcemap: true,
+				//	comments: false
+				//}))
+                // Initializes sourcemaps
+                .pipe(sourcemaps.init())
+                .pipe(sass({
+                    includePaths: [
+                        'C:/Ruby193/lib/ruby/gems/1.9.1/gems/susy-2.2.2/sass/susy/language'
+                    ],
+                    errLogToConsole: true
+                }))
+                // Writes sourcemaps into the CSS file
+                .pipe(sourcemaps.write())
 				.pipe(autoprefix("last 15 version"))
 				.pipe(minifycss())
 				.pipe(concat('styles.min.css'))
 				.pipe(gulp.dest(stylesDest))
-				.pipe(connect.reload())
 				.pipe(notify('Styles compiled!'));
 	});
 
@@ -77,14 +92,13 @@
 	JS
 ************************************************/
 	gulp.task('scripts', function() {
-	return browserify(scriptsSrc, { debug: true })
-			.bundle().on('error', handleError)
-			.pipe(source('bundle.js'))
-			.pipe(streamify(uglify()))
-			.pipe(rename('scripts.min.js'))
-			.pipe(gulp.dest(scriptsDest))
-			.pipe(connect.reload())
-			.pipe(notify('Scripts compiled!'));
+        return browserify(scriptsSrc, { debug: true })
+                .bundle().on('error', handleError)
+                .pipe(source('bundle.js'))
+                .pipe(streamify(uglify()))
+                .pipe(rename('scripts.min.js'))
+                .pipe(gulp.dest(scriptsDest))
+                .pipe(notify('Scripts compiled!'));
 	});
 
 /************************************************
@@ -92,32 +106,27 @@
 ************************************************/
 	gulp.task('images', function () {
 		return gulp.src(imgSrc)
+                .pipe(changed(imgDest))
+                .pipe(imagemin({
+                    optimizationLevel: 3,
+                    progressive: true,
+                    interlaced: true
+                }))
 				.pipe(gulp.dest(imgDest))
-				.pipe(connect.reload())
-				.pipe(notify('Images delivered!'));
-	});
-
-/************************************************
-	LIVERELOAD
-************************************************/
-	gulp.task('connect', function(){
-		connect.server({
-			root: 'build',
-			livereload: true
-		});
+				.pipe(notify('Images compressed!'));
 	});
 
 /************************************************
 	WATCH
 ************************************************/
 	gulp.task('watch', function() {
-		gulp.watch(stylesWatch, ['styles']);
-		gulp.watch(scriptsWatch, ['scripts']);
-		gulp.watch(htmlWatch, ['html']);
-		gulp.watch(imgWatch, ['images']);
+		gulp.watch(phpSrc,       ['phpServer', browserSync.reload]);
+		gulp.watch(stylesSrc,    ['styles',    browserSync.reload]);
+		gulp.watch(scriptsWatch, ['scripts',   browserSync.reload]);
+		gulp.watch(imgSrc,       ['images',    browserSync.reload]);
 	});
 
 /************************************************
 	DEFAULT
 ************************************************/
-	gulp.task('default', ['html', 'styles', 'scripts', 'watch', 'connect']);
+	gulp.task('default', ['phpServer', 'styles', 'scripts', 'watch']);

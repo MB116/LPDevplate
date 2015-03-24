@@ -35,13 +35,7 @@
  *
  * $Default classes
  *
- */ 
- 	.container{
-	    position: relative;
-	    height: 100%;
-	    @extend %clear;
-    }
- 	
+ */
  	.clear{ clear: both; }
  	
  	.title {

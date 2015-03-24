@@ -10,6 +10,11 @@
           animation-iteration-count: infinite;
 }
 
+.animated.short {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+
 .animated.hinge {
   -webkit-animation-duration: 2s;
           animation-duration: 2s;

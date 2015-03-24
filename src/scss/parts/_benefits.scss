@@ -8,4 +8,44 @@
           margin-bottom: 75px;
      }
 
+	&__col{
+		background-color: $main;
+		height: 50px;
+	}
+	    &__col{
+            @include span(4);
+		    visibility: hidden;
+
+            i{
+                display: inline-block;
+                width:  100px;
+                height: 100px;
+                margin-bottom: 15px;
+            }
+
+            figcaption{
+                color: $text;
+                font-size: 20px;
+                line-height: 1;
+            }
+
+            &--1{
+                i{
+                    background-position: 0 0;
+                }
+            }
+
+            &--2{
+                i{
+                    background-position: 0 -1px*120;
+                }
+            }
+
+            &--3{
+                @include span(4 last);
+                i{
+                    background-position: 0 -2px*120;
+                }
+            }
+        }
 }/* End .benefits */

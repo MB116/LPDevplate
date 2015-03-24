@@ -11,17 +11,16 @@
  *
  */
  	//Base settings
-	@import 'compass/reset';
+//	@import 'compass/reset';
 	@import 'settings/fonts';
 	@import 'settings/grids';
 	@import 'settings/colors';
 	@import 'settings/mixins';
-	@import 'settings/default';
+	@import 'settings/base';
 	
 	//Base modules
 	@import 'modules/btns';
 	@import 'modules/form';
-	@import "modules/modal";
 	@import 'modules/scrollup';
 	@import 'modules/sprites';
 //===================================================
@@ -51,6 +50,7 @@
 //	@import "plugins/gallery";
 //	@import "plugins/slider";
 //	@import "plugins/timer";
+	@import "plugins/popup";
 //	@import "plugins/animate";
 
 

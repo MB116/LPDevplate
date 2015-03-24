@@ -6,7 +6,7 @@
 	$susy: (
 		container: 960px,
 		columns: 12,
-		gutters: 1/12,
+		gutters: (1/12),
 		global-box-sizing: border-box,
 	);
 
@@ -15,7 +15,7 @@
 	$default: (
 		container: 960px,
 		columns: 12,
-		gutters: 1/12,
+		gutters: (1/12),
 		global-box-sizing: border-box,
 	);
 
@@ -33,7 +33,7 @@
 	$five: (
 		container: 960px,
 		columns: 5,
-		gutters: 1/5,
+		gutters: (1/5),
 		global-box-sizing: border-box,
 	);
 
@@ -41,7 +41,7 @@
 	$four: (
 		container: 960px,
 		columns: 4,
-		gutters: 1/4,
+		gutters: (1/4),
 		global-box-sizing: border-box,
 	);
 
@@ -62,4 +62,9 @@
 		global-box-sizing: border-box,
 	);
 
-.container{ @include container; }
+.container{
+	@include container;
+	@extend %clear;
+	position: relative;
+	height: 100%;
+}
