@@ -7,13 +7,13 @@
 .form{
 	background-color: $formBg;
 	color: $text;
-  	padding: 20px 0;
-  	box-shadow: 0 0 5px $primary;
+	padding: 20px 0;
+	box-shadow: 0 0 5px $primary;
 	text-align: center;
 
-  	//Forms inner container
+	//Forms inner container
 	&__container{
-	  padding: 0 30px;
+		padding: 0 30px;
 	}
 
 	// Forms title
@@ -23,7 +23,7 @@
 		text-transform: uppercase;
 		line-height: 1.2;
 	}
-	
+
 	// Forms subtitle
 	&__text{
 		margin-bottom: 10px;
@@ -58,7 +58,7 @@
 			opacity: 1;
 		}
 
-		&:-moz-placeholder { 
+		&:-moz-placeholder {
 			font-family: $defaultFont;
 			font-size: 18px;
 			text-transform: none;
@@ -69,7 +69,7 @@
 			opacity: 1;
 		}
 
-		&::-moz-placeholder {  
+		&::-moz-placeholder {
 			font-family: $defaultFont;
 			font-size: 18px;
 			text-transform: none;
@@ -85,13 +85,13 @@
 			border: 1px solid $error;
 		}
 	}
-		
+
 	// Forms required fields wrapper
 	&__errorbox{
 		position: relative;
 		display: block;
 	}
-	
+
 	// Forms label
 	label{
 		font-size: 11px;

@@ -4,6 +4,7 @@
 .header{
     height: 100px;
     background-color: $headerBg;
+	color: $default;
 
     &__logo{
 		display: inline-block;
@@ -73,6 +74,7 @@
 //			}
 //		}
 //	}
+
 }/* End .header */
 
 @media screen and (max-width: 1150px) {

@@ -2,7 +2,6 @@
 	INCLUDE PLUGINS
 ************************************************/
 	var gulp        = require('gulp');
-	//var compass     = require('gulp-compass');
     var sass        = require('gulp-sass');
     var sourcemaps  = require('gulp-sourcemaps');
 	var uglify      = require('gulp-uglify');
@@ -11,6 +10,7 @@
 	var source      = require('vinyl-source-stream');
 	var streamify   = require('gulp-streamify');
 	var minifycss   = require('gulp-cssmin');
+	var changed     = require('gulp-changed');
 	var notify      = require('gulp-notify');
 	var autoprefix  = require('gulp-autoprefixer');
 	var connect     = require('gulp-connect-php');
@@ -59,34 +59,22 @@
 	});
 
 /************************************************
-	SCSS & CSS
+	SCSS(libsass) & CSS
 ************************************************/
-	gulp.task('styles', function() {
-		return gulp.src(stylesSrc)
-				//.pipe(compass({
-				//	config_file: './config.rb',
-				//	css: stylesDest,
-				//	sass: 'src/scss/',
-				//	debug : true,
-				//	sourcemap: true,
-				//	comments: false
-				//}))
-                // Initializes sourcemaps
-                .pipe(sourcemaps.init())
-                .pipe(sass({
-                    includePaths: [
-                        'C:/Ruby193/lib/ruby/gems/1.9.1/gems/susy-2.2.2/sass/susy/language'
-                    ],
-                    errLogToConsole: true
-                }))
-                // Writes sourcemaps into the CSS file
-                .pipe(sourcemaps.write())
-				.pipe(autoprefix("last 15 version"))
-				.pipe(minifycss())
-				.pipe(concat('styles.min.css'))
-				.pipe(gulp.dest(stylesDest))
-				.pipe(notify('Styles compiled!'));
-	});
+    gulp.task('styles', function() {
+        gulp.src(stylesSrc)
+            .pipe(sass({
+                includePaths: [
+                    'C:/Ruby193/lib/ruby/gems/1.9.1/gems/susy-2.2.2/sass' //required for sass
+                ],
+                errLogToConsole: true
+            }))
+            .pipe(autoprefix("last 15 version"))
+            .pipe(minifycss())
+            .pipe(concat('styles.min.css'))
+            .pipe(gulp.dest(stylesDest))
+            .pipe(notify('Styles compiled!'));
+    });
 
 /************************************************
 	JS

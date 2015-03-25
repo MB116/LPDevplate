@@ -4,6 +4,10 @@
 	$description = "";
 	$admin_password = "click2015";
 
+//GA Analytics and Yandex Metrica ids
+    $ga_id = '';
+    $ya_id = '';
+
 //Mail sending vars
 	$site = str_replace('www.', '', $_SERVER['HTTP_HOST']);
 	
@@ -20,4 +24,3 @@
 	$mailpassword = "click2015";
 
 
-?>

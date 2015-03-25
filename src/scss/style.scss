@@ -14,7 +14,7 @@
 //	@import 'compass/reset';
 	@import 'settings/fonts';
 	@import 'settings/grids';
-	@import 'settings/colors';
+	@import 'settings/_colors';
 	@import 'settings/mixins';
 	@import 'settings/base';
 	
@@ -50,7 +50,7 @@
 //	@import "plugins/gallery";
 //	@import "plugins/slider";
 //	@import "plugins/timer";
-	@import "plugins/popup";
+	@import "plugins/_popup";
 //	@import "plugins/animate";
 
 
