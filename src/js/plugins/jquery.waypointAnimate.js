@@ -1,7 +1,10 @@
 //My custom plugin for using waypoint and animateCSS
 (function($) {
 
+
     $.fn.waypointAnimate = function(animateIn) {
+
+        $(this).addClass('animated');
 
         $(this).waypoint(function(direction) {
             if (direction === "down") {

@@ -5,8 +5,8 @@
 	$admin_password = "click2015";
 
 //GA Analytics and Yandex Metrica ids
-    $ga_id = '';
-    $ya_id = '';
+    $ga_id = '1';
+    $ya_id = '1';
 
 //Mail sending vars
 	$site = str_replace('www.', '', $_SERVER['HTTP_HOST']);
