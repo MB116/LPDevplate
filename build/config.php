@@ -1,26 +1,25 @@
 <?php
 //Main vars
-	$title = "";
-	$description = "";
-	$admin_password = "click2015";
+$title = "";
+$description = "";
+$admin_password = "click2015";
 
 //GA Analytics and Yandex Metrica ids
-    $ga_id = '1';
-    $ya_id = '1';
+$ga_id = '1';
+$ya_id = '1';
 
 //Mail sending vars
-	$site = str_replace('www.', '', $_SERVER['HTTP_HOST']);
-	
-	$address1 = "klienty.kz@gmail.com";
-	// $address2 = "";
-	// $address3 = "";
-	// $address4 = "";
-	// $address5 = "";
+$site = str_replace('www.', '', $_SERVER['HTTP_HOST']);
 
-	$is_smtp = true;
+$address1 = "klienty.kz@gmail.com";
+// $address2 = "";
+// $address3 = "";
+// $address4 = "";
+// $address5 = "";
 
-	$from_server  = "cp17.skilltex.kz";
-	$mailfrom     = "info@".$site;
-	$mailpassword = "click2015";
+$is_smtp = true;
+$from_server  = "cp17.skilltex.kz";
+$mailfrom     = "info@".$site;
+$mailpassword = "click2015";
 
 

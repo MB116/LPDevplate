@@ -11,9 +11,7 @@
 /*
  * Other scripts
  */
-    require('./initialize/iframeMap.js');
-    require('./initialize/gallery.js');
+    //require('./initialize/gallery.js');
     //require('./initialize/slider.js');
-    //require('./initialize/sticky-header.js');
     //require('./initialize/timer.js');
-    require('./initialize/animate.js');
+    //require('./initialize/animate.js');
