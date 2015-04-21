@@ -11,10 +11,10 @@
  *
  */
  	//Base settings
-//	@import 'compass/reset';
+	@import 'settings/reset';
 	@import 'settings/fonts';
 	@import 'settings/grids';
-	@import 'settings/_colors';
+	@import 'settings/colors';
 	@import 'settings/mixins';
 	@import 'settings/base';
 	
@@ -47,8 +47,7 @@
  *
  */ 
 	@import "plugins/vendor/reject"; //older browsers notification
-	@import "plugins/popup";
-//	@import "plugins/gallery";
+	@import "plugins/lightbox";
 //	@import "plugins/slider";
 //	@import "plugins/timer";
 //	@import "plugins/animate";

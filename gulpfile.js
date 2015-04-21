@@ -3,7 +3,6 @@
 ************************************************/
 	var gulp        = require('gulp');
     var sass        = require('gulp-sass');
-    var sourcemaps  = require('gulp-sourcemaps');
 	var uglify      = require('gulp-uglify');
 	var concat      = require('gulp-concat');
 	var browserify  = require('browserify');
@@ -15,8 +14,10 @@
 	var autoprefix  = require('gulp-autoprefixer');
 	var connect     = require('gulp-connect-php');
 	var imagemin    = require('gulp-imagemin');
-	var rename      = require("gulp-rename");
+	var rename      = require('gulp-rename');
 	var browserSync = require('browser-sync');
+    var critical = require('critical');
+	var reload      = browserSync.reload;
 
 
 /************************************************
@@ -31,7 +32,7 @@
 	var scriptsDest  = './build/js';
 	var scriptsWatch = './src/js/**/*.js';
 
-	var imgSrc       = './src/img/**/*';
+	var imgSrc       = './build/img/**/*';
 	var imgDest      = './build/img';
 
 
@@ -55,6 +56,8 @@
 			browserSync({
 				proxy: 'localhost:8000'
 			});
+
+            gulp.watch(stylesSrc, ['styles']);
 		});
 	});
 
@@ -67,12 +70,15 @@
                 includePaths: [
                     'C:/Ruby193/lib/ruby/gems/1.9.1/gems/susy-2.2.2/sass' //required for sass
                 ],
-                errLogToConsole: true
+                errLogToConsole: true,
+                sourceComments: 'map',
+                sourceMap: 'scss'
             }))
             .pipe(autoprefix("last 15 version"))
             .pipe(minifycss())
             .pipe(concat('styles.min.css'))
             .pipe(gulp.dest(stylesDest))
+            .pipe(reload({stream: true}))
             .pipe(notify('Styles compiled!'));
     });
 
@@ -108,13 +114,33 @@
 	WATCH
 ************************************************/
 	gulp.task('watch', function() {
-		gulp.watch(phpSrc,       ['phpServer', browserSync.reload]);
-		gulp.watch(stylesSrc,    ['styles',    browserSync.reload]);
-		gulp.watch(scriptsWatch, ['scripts',   browserSync.reload]);
-		gulp.watch(imgSrc,       ['images',    browserSync.reload]);
+		gulp.watch(phpSrc,       ['phpServer', reload]);
+		gulp.watch(scriptsWatch, ['scripts',   reload]);
+		gulp.watch(imgSrc,       ['images',    reload]);
 	});
 
 /************************************************
 	DEFAULT
 ************************************************/
 	gulp.task('default', ['phpServer', 'styles', 'scripts', 'watch']);
+
+
+gulp.task('copystyles', function () {
+    return gulp.src(['build/css/styles.min.css'])
+        .pipe(rename({
+            basename: "site" // site.css
+        }))
+        .pipe(gulp.dest('build/css/'));
+});
+
+gulp.task('critical', ['copystyles'], function () {
+    critical.generateInline({
+        base: 'build/',
+        src: 'index.php',
+        styleTarget: 'css/styles.min.css',
+        htmlTarget: 'index.php',
+        width: 960,
+        height: 780,
+        minify: true
+    });
+});

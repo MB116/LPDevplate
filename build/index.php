@@ -123,7 +123,9 @@
 						<div class="form__errorbox">
 							<input class="form__input phone" name="Phone" placeholder="Телефон *" type="text">
 						</div>
-						<input type="text" class="form__input" name="Email" placeholder="Email" onfocus="if (this.placeholder=='Email') this.placeholder='' " onblur="if (this.placeholder==''){this.placeholder='Email'}">
+                        <div class="form__errorbox">
+						    <input type="text" class="form__input" name="Email" placeholder="Email" onfocus="if (this.placeholder=='Email') this.placeholder='' " onblur="if (this.placeholder==''){this.placeholder='Email'}">
+                        </div>
 							<input type="hidden" name="subject" value="Заявка на заказ">
 							<input type="hidden" name="from" value="ОТПРАВИТЬ ЗАЯВКУ в первом скроле ">
 							<input type="hidden" name="utm_source" value="<?php echo $utm_source; ?>">
@@ -143,7 +145,6 @@
 <!-- Other page markup -->
 
 <link rel="stylesheet" href="css/styles.min.css"/>
-
 
 <!--================================================
 					#footer
@@ -179,7 +180,9 @@
                 <div class="form__errorbox">
                     <input class="form__input phone" name="Phone" placeholder="Телефон *" type="text">
                 </div>
-                <input type="text" class="form__input" name="Email" placeholder="Email" onfocus="if (this.placeholder=='Email') this.placeholder='' " onblur="if (this.placeholder==''){this.placeholder='Email'}">
+                <div class="form__errorbox">
+                    <input type="text" class="form__input" name="Email" placeholder="Email" onfocus="if (this.placeholder=='Email') this.placeholder='' " onblur="if (this.placeholder==''){this.placeholder='Email'}">
+                </div>
 
                 <input type="hidden" id="jsModalSubject" name="subject" value="Заявка на обратный звонок ">
                 <input type="hidden" id="jsModalFrom"    name="from" value="ПОДАТЬ ЗАЯВКУ в шапке сайта ">

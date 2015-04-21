@@ -34,108 +34,106 @@
 					Name:{
 						required:true,
 						minlength:2,
-						maxlength:100,
+						maxlength:100
 					},
 					Email:{
-						required:false,
+						required:true,
 						minlength:2,
-						maxlength:100,
+						maxlength:100
 					},
 					Phone:{
 						required:true,
 						minlength:2,
-						maxlength:100,
+						maxlength:100
 					}
 				},
 				messages:{
 					Name:{
 						required:"Поле обязательно для заполнения!",
 						minlength:"Поле не должно содержать менее 2-х символов",
-						maxlength:"",
+						maxlength:""
 					},
 					Email:{
 						required:"Поле обязательно для заполнения!",
 						minlength:"Поле не должно содержать менее 2-х символов",
-						maxlength:"",
+						maxlength:""
 					},
 					Phone:{
 						required:"Поле обязательно для заполнения!",
 						minlength:"Поле не должно содержать менее 2-х символов",
-						maxlength:"",
+						maxlength:""
 					}
 				}
 			});
-
 			$("#jsForm_2").validate({
 				rules:{
 					Name:{
 						required:true,
 						minlength:2,
-						maxlength:100,
+						maxlength:100
 					},
 					Email:{
-						required:false,
+						required:true,
 						minlength:2,
-						maxlength:100,
+						maxlength:100
 					},
 					Phone:{
 						required:true,
 						minlength:2,
-						maxlength:100,
+						maxlength:100
 					}
 				},
 				messages:{
 					Name:{
 						required:"Поле обязательно для заполнения!",
 						minlength:"Поле не должно содержать менее 2-х символов",
-						maxlength:"",
+						maxlength:""
 					},
 					Email:{
 						required:"Поле обязательно для заполнения!",
 						minlength:"Поле не должно содержать менее 2-х символов",
-						maxlength:"",
+						maxlength:""
 					},
 					Phone:{
 						required:"Поле обязательно для заполнения!",
 						minlength:"Поле не должно содержать менее 2-х символов",
-						maxlength:"",
+						maxlength:""
 					}
 				}
 			});
-
 			$("#jsForm_3").validate({
 				rules:{
 					Name:{
 						required:true,
 						minlength:2,
-						maxlength:100,
+						maxlength:100
 					},
 					Email:{
-						required:false,
+						required:true,
 						minlength:2,
-						maxlength:100,
+						maxlength:100
 					},
 					Phone:{
 						required:true,
 						minlength:2,
-						maxlength:100,
+						maxlength:100
 					}
 				},
 				messages:{
 					Name:{
 						required:"Поле обязательно для заполнения!",
 						minlength:"Поле не должно содержать менее 2-х символов",
-						maxlength:"",
+						maxlength:""
 					},
 					Email:{
 						required:"Поле обязательно для заполнения!",
 						minlength:"Поле не должно содержать менее 2-х символов",
-						maxlength:"",
+						maxlength:""
 					},
 					Phone:{
 						required:"Поле обязательно для заполнения!",
 						minlength:"Поле не должно содержать менее 2-х символов",
-						maxlength:"",
+						maxlength:""
 					}
 				}
 			});
@@ -145,34 +143,34 @@
 					Name:{
 						required:true,
 						minlength:2,
-						maxlength:100,
+						maxlength:100
 					},
 					Email:{
-						required:false,
+						required:true,
 						minlength:2,
-						maxlength:100,
+						maxlength:100
 					},
 					Phone:{
 						required:true,
 						minlength:2,
-						maxlength:100,
+						maxlength:100
 					}
 				},
 				messages:{
 					Name:{
 						required:"Поле обязательно для заполнения!",
 						minlength:"Поле не должно содержать менее 2-х символов",
-						maxlength:"",
+						maxlength:""
 					},
 					Email:{
 						required:"Поле обязательно для заполнения!",
 						minlength:"Поле не должно содержать менее 2-х символов",
-						maxlength:"",
+						maxlength:""
 					},
 					Phone:{
 						required:"Поле обязательно для заполнения!",
 						minlength:"Поле не должно содержать менее 2-х символов",
-						maxlength:"",
+						maxlength:""
 					}
 				}
 			});
