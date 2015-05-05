@@ -3,6 +3,9 @@
 	require_once "initialize.php";
 	$match = md5($admin_password);
 	$error = false;
+
+	error_reporting(-1);
+	ini_set('display_errors', 'On');
 ?>
 <!DOCTYPE html>
 <html lang="rus">

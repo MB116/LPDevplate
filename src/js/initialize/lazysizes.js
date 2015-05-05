@@ -1,3 +1,4 @@
+//Lazyloading for images
 (function (factory) {
     window.lazySizes = factory(window);
     if (typeof define === 'function' && define.amd) {

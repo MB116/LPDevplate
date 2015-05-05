@@ -3,26 +3,20 @@
  *	All button setting of website
  *
  */
-
-button{
-	border: none;
-	background-color: transparent;
-}
 .btn{
 	position: relative;
-	padding: 5px 30px;
 	display: inline-block;
+	padding: 5px 30px;
+	background: $btn;
 	color: $default;
-	font-family: $defaultFont;
-	font-size: 20px;
-	font-weight: normal;
 	text-align: center;
 	text-transform: uppercase;
+	font-weight: normal;
+	font-size: 20px;
+	font-family: $defaultFont;
 	line-height: 1.5;
 	cursor: pointer;
 	transition: background 0.5s ease;
-
-	background: $btn;
 
 	&:hover{
 		background: darken($btn, 15%);
@@ -34,5 +28,3 @@ button{
 		text-shadow: none;
 	}
 }
-
-

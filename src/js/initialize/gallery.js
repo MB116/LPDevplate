@@ -10,6 +10,8 @@
 
 // Initialization
 	$(document).ready(function() {
+
+        //Images lightbox
 		$(".lightbox").magnificPopup({
             type: 'image',
             closeOnContentClick: true,
@@ -25,6 +27,7 @@
             }
         });
 
+        //Images gallery with zoom effect
         $('.gallery').magnificPopup({
             delegate: 'a',
             type: 'image',

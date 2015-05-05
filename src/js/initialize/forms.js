@@ -9,16 +9,11 @@
 //		validate    - http://jqueryvalidation.org/
 
 // Required plugins
-	require('../plugins/jquery.placeholder.js');
 	require('../plugins/jquery.maskedinput.js');
 	require('../plugins/jquery.validate.min.js');
 
 // Initialization
 	$(document).ready(function() {
-		/******************************************
-		 * Input placeholders in IE
-		 */
-			$('input, textarea').placeholder();
 
 		/******************************************
 		 * Phone masks

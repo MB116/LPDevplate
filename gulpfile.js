@@ -16,7 +16,7 @@
 	var imagemin    = require('gulp-imagemin');
 	var rename      = require('gulp-rename');
 	var browserSync = require('browser-sync');
-    var critical = require('critical');
+    var critical    = require('critical');
 	var reload      = browserSync.reload;
 
 
@@ -68,7 +68,7 @@
         gulp.src(stylesSrc)
             .pipe(sass({
                 includePaths: [
-                    'C:/Ruby193/lib/ruby/gems/1.9.1/gems/susy-2.2.2/sass' //required for sass
+                    'C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/susy-2.2.2/sass' //required for sass
                 ],
                 errLogToConsole: true,
                 sourceComments: 'map',
@@ -125,6 +125,9 @@
 	gulp.task('default', ['phpServer', 'styles', 'scripts', 'watch']);
 
 
+/************************************************
+ Critical CSS
+ ************************************************/
 gulp.task('copystyles', function () {
     return gulp.src(['build/css/styles.min.css'])
         .pipe(rename({

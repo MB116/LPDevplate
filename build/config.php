@@ -18,7 +18,7 @@ $address1 = "klienty.kz@gmail.com";
 // $address5 = "";
 
 $is_smtp = true;
-$from_server  = "cp17.skilltex.kz";
+$from_server  = $site;
 $mailfrom     = "info@".$site;
 $mailpassword = "click2015";
 
