@@ -9,11 +9,9 @@
 	var source      = require('vinyl-source-stream');
 	var streamify   = require('gulp-streamify');
 	var minifycss   = require('gulp-cssmin');
-	var changed     = require('gulp-changed');
 	var notify      = require('gulp-notify');
 	var autoprefix  = require('gulp-autoprefixer');
 	var connect     = require('gulp-connect-php');
-	var imagemin    = require('gulp-imagemin');
 	var rename      = require('gulp-rename');
 	var browserSync = require('browser-sync');
     var critical    = require('critical');
@@ -32,18 +30,6 @@
 	var scriptsDest  = './build/js';
 	var scriptsWatch = './src/js/**/*.js';
 
-	var imgSrc       = './build/img/**/*';
-	var imgDest      = './build/img';
-
-
-/************************************************
-	Error handler
-************************************************/
-	function handleError(err) {
-	    console.log(err.toString());
-	    this.emit('end');
-	}
-
 /************************************************
 	PHP SERVER
 ************************************************/
@@ -57,7 +43,10 @@
 				proxy: 'localhost:8000'
 			});
 
+            //Watch
             gulp.watch(stylesSrc, ['styles']);
+            gulp.watch(phpSrc,       ['phpServer']);
+            gulp.watch(scriptsWatch, ['scripts']);
 		});
 	});
 
@@ -96,33 +85,17 @@
 	});
 
 /************************************************
-	IMG
-************************************************/
-	gulp.task('images', function () {
-		return gulp.src(imgSrc)
-                .pipe(changed(imgDest))
-                .pipe(imagemin({
-                    optimizationLevel: 3,
-                    progressive: true,
-                    interlaced: true
-                }))
-				.pipe(gulp.dest(imgDest))
-				.pipe(notify('Images compressed!'));
-	});
-
-/************************************************
-	WATCH
-************************************************/
-	gulp.task('watch', function() {
-		gulp.watch(phpSrc,       ['phpServer', reload]);
-		gulp.watch(scriptsWatch, ['scripts',   reload]);
-		gulp.watch(imgSrc,       ['images',    reload]);
-	});
+ Error handler
+ ************************************************/
+function handleError(err) {
+    console.log(err.toString());
+    this.emit('end');
+}
 
 /************************************************
 	DEFAULT
 ************************************************/
-	gulp.task('default', ['phpServer', 'styles', 'scripts', 'watch']);
+	gulp.task('default', ['phpServer']);
 
 
 /************************************************
