@@ -2,4 +2,7 @@ node_modules/
 design/*.psd
 design/*.jpg
 design/*.png
+build/admin/*
+build/config.php
+report.txt
 .sass-cache/

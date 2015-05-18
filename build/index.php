@@ -1,7 +1,7 @@
 <?php
 	//Main page configuration
-	include_once "config.php";
-	$url = $_SERVER['HTTP_HOST'];
+	require_once "config.php";
+    $url = $_SERVER['HTTP_HOST'];
 
 	//UTM
 	if($_GET['utm_source'] === "yandex"){
@@ -85,58 +85,58 @@
 
 <!-- Above the fold content (Critical path) -->
 
-	<!--================================================
-						#header
-	=================================================-->
-		<header class="header">
-			<div class="container">
-				<a class="header__logo" href=""><img src="img/logo.png" width="165" height="70" alt=""/></a>
-				<div class="header__phones">
-					<a class="header__phones-link" href="tel:+7 (727) 777 77 77">+7 (727) 777 77 77</a>
-					<a class="btn header__phones-btn jsModalTrigger"
-					   href="#jsModalForm"
-					   data-title="ОСТАВЬТЕ СВОИ КОНТАКТЫ"
-					   data-subtitle="НАШИ МЕНЕДЖЕРЫ ПЕРЕЗВОНЯТ ВАМ И ОТВЕТЯТ НА ВАШИ ВОПРОСЫ"
-					   data-text="Текст 3"
-					   data-subject="Текст 4"
-					   data-from="Текст 5"
-					   data-btn="Заказать звонок"
-							>Заказать звонок</a>
-				</div>
-			</div>
-		</header><!-- /.header -->
+<!--================================================
+                    #header
+=================================================-->
+    <header class="header">
+        <div class="container">
+            <a class="header__logo" href=""><img src="img/logo.png" width="165" height="70" alt=""/></a>
+            <div class="header__phones">
+                <a class="header__phones-link" href="tel:+7 (727) 777 77 77">+7 (727) 777 77 77</a>
+                <a class="btn header__phones-btn jsModalTrigger"
+                   href="#jsModalForm"
+                   data-title="ОСТАВЬТЕ СВОИ КОНТАКТЫ"
+                   data-subtitle="НАШИ МЕНЕДЖЕРЫ ПЕРЕЗВОНЯТ ВАМ И ОТВЕТЯТ НА ВАШИ ВОПРОСЫ"
+                   data-text="Текст 3"
+                   data-subject="Текст 4"
+                   data-from="Текст 5"
+                   data-btn="Заказать звонок"
+                        >Заказать звонок</a>
+            </div>
+        </div>
+    </header><!-- /.header -->
 
 
-	<!--================================================
-						#main
-	=================================================-->
-		<main class="main">
-			<div class="container">
-				<h1 class="title main__title">LPDevplate</h1>
-				<h2 class="main__subtitle">Lorem ipsum dolor sit amet</h2>
-				<form class="form main__form" id="jsForm_1" action="admin/sendmail.php" method="post">
-					<h2 class="form__title">Заполните заявку <br/> и получите скидку!</h2>
-					<div class="form__container">
-						<div class="form__errorbox">
-							<input type="text" class="form__input" name="Name" placeholder="Имя *" onfocus="if (this.placeholder=='Имя *') this.placeholder='' " onblur="if (this.placeholder==''){this.placeholder='Имя *'}">
-						</div>
-						<div class="form__errorbox">
-							<input class="form__input phone" name="Phone" placeholder="Телефон *" type="text">
-						</div>
-                        <div class="form__errorbox">
-						    <input type="text" class="form__input" name="Email" placeholder="Email" onfocus="if (this.placeholder=='Email') this.placeholder='' " onblur="if (this.placeholder==''){this.placeholder='Email'}">
-                        </div>
-							<input type="hidden" name="subject" value="Заявка на заказ">
-							<input type="hidden" name="from" value="ОТПРАВИТЬ ЗАЯВКУ в первом скроле ">
-							<input type="hidden" name="utm_source" value="<?php echo $utm_source; ?>">
-							<input type="hidden" name="type"       value="<?php echo $type; ?>">
-							<input type="hidden" name="source"     value="<?php echo $source; ?>">
-							<input type="hidden" name="keyword"    value="<?php echo $keyword; ?>">
-						<button class="btn main__form-btn">ОТПРАВИТЬ ЗАЯВКУ</button>
-					</div>
-				</form>
-			</div><!-- /.container -->
-		</main><!-- /.main -->
+<!--================================================
+                    #main
+=================================================-->
+    <main class="main">
+        <div class="container">
+            <h1 class="title main__title">LPDevplate</h1>
+            <h2 class="main__subtitle">Lorem ipsum dolor sit amet</h2>
+            <form class="form main__form" id="jsForm_1" action="admin/bootstrap.php" method="post">
+                <h2 class="form__title">Заполните заявку <br/> и получите скидку!</h2>
+                <div class="form__container">
+                    <div class="form__errorbox">
+                        <input type="text" class="form__input" name="Name" placeholder="Имя *" onfocus="if (this.placeholder=='Имя *') this.placeholder='' " onblur="if (this.placeholder==''){this.placeholder='Имя *'}">
+                    </div>
+                    <div class="form__errorbox">
+                        <input class="form__input phone" name="Phone" placeholder="Телефон *" type="text">
+                    </div>
+                    <div class="form__errorbox">
+                        <input type="text" class="form__input" name="Email" placeholder="Email" onfocus="if (this.placeholder=='Email') this.placeholder='' " onblur="if (this.placeholder==''){this.placeholder='Email'}">
+                    </div>
+                        <input type="hidden" name="subject" value="Заявка на заказ">
+                        <input type="hidden" name="from" value="ОТПРАВИТЬ ЗАЯВКУ в первом скроле ">
+                        <input type="hidden" name="utm_source" value="<?php echo $utm_source; ?>">
+                        <input type="hidden" name="type"       value="<?php echo $type; ?>">
+                        <input type="hidden" name="source"     value="<?php echo $source; ?>">
+                        <input type="hidden" name="keyword"    value="<?php echo $keyword; ?>">
+                    <button class="btn main__form-btn">ОТПРАВИТЬ ЗАЯВКУ</button>
+                </div>
+            </form>
+        </div><!-- /.container -->
+    </main><!-- /.main -->
 
 <!-- End above the fold content (Critical path) -->
 
@@ -144,7 +144,7 @@
 
 <!-- Other page markup -->
 
-<link rel="stylesheet" href="css/styles.min.css"/>
+    <link rel="stylesheet" href="css/styles.min.css"/>
 
 <!--================================================
 					#footer
@@ -159,7 +159,7 @@
 			</div>
 			<div class="footer__right">Another info</div>
 		</div><!-- /.container -->
-		<a class="footer__created-by" href="http://firstlead.kz"><img class="lazyload" data-src="img/created.png" width="200" height="89" alt=""/></a>
+		<a class="footer__created-by" href="http://cpc.kz/landing"><img class="lazyload" data-src="img/created.png" width="200" height="89" alt=""/></a>
 	</footer><!-- /.footer -->
 
 <!--================================================
@@ -216,31 +216,31 @@
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic-ext,cyrillic"/>
 
 <!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function (d, w, c) {
-        (w[c] = w[c] || []).push(function() {
-            try {
-                w.yaCounter28959100 = new Ya.Metrika({id:<?=$ya_id; ?>,
-                    webvisor:true,
-                    clickmap:true,
-                    trackLinks:true,
-                    accurateTrackBounce:true});
-            } catch(e) { }
-        });
+    <script type="text/javascript">
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter28959100 = new Ya.Metrika({id:<?=$ya_id; ?>,
+                        webvisor:true,
+                        clickmap:true,
+                        trackLinks:true,
+                        accurateTrackBounce:true});
+                } catch(e) { }
+            });
 
-        var n = d.getElementsByTagName("script")[0],
-            s = d.createElement("script"),
-            f = function () { n.parentNode.insertBefore(s, n); };
-        s.type = "text/javascript";
-        s.async = true;
-        s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+            var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
 
-        if (w.opera == "[object Opera]") {
-            d.addEventListener("DOMContentLoaded", f, false);
-        } else { f(); }
-    })(document, window, "yandex_metrika_callbacks");
-</script>
-<noscript><div><img src="//mc.yandex.ru/watch/<?=$ya_id; ?>" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else { f(); }
+        })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript><div><img src="//mc.yandex.ru/watch/<?=$ya_id; ?>" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 </body>
 </html>
