@@ -19,6 +19,7 @@
 	@import 'settings/base';
 	
 	//Base modules
+	@import 'modules/title';
 	@import 'modules/btns';
 	@import 'modules/form';
 	@import 'modules/scrollup';
@@ -47,7 +48,7 @@
  *
  */ 
 	@import "plugins/vendor/reject"; //older browsers notification
-//	@import "plugins/lightbox";
+	@import "plugins/lightbox";
 //	@import "plugins/slider";
 //	@import "plugins/timer";
 //	@import "plugins/animate";
