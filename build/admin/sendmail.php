@@ -47,7 +47,9 @@ if($name && $phone && $email) {
     /*
      * Expertsender API
      */
-        expertSender($listId, $name, $email);
+        if($list_id){
+            expertSender($listId, $name, $email);
+        }
 
     //***********************************************************
     //Check data is it already added and add or update
