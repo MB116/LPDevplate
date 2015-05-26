@@ -1,13 +1,13 @@
 <?php
-//Main page configuration
-require_once "config.php";
+    //Main page configuration
+    require_once "config.php";
 ?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=1200">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Спасибо за отправленную заявку!</title>
 	<meta name="description" content="">
 
@@ -24,6 +24,7 @@ require_once "config.php";
 			height: 100%;
 		}
 		body{
+            min-width: 100%;
 			background: url(img/main.jpg) center center no-repeat;
 			-webkit-background-size: cover;
 			   -moz-background-size: cover;
@@ -38,13 +39,18 @@ require_once "config.php";
 			margin: 0 auto;
 			padding: 30px;
 			text-align: center;
-			border-radius: 10px;
 			background: rgba(0,0,0,0.5);
 		}
 		.thanks>h3{
 			font-size: 30px;
 			color: #fff;
 		}
+
+        @media screen and (max-width: 980px) {
+            .thanks{
+                width: 100%;
+            }
+        }
 	</style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -61,7 +67,7 @@ require_once "config.php";
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        ga('create', <?=$ga_id; ?>, 'auto');
+        ga('create', '<?=$ga_id; ?>', 'auto');
         ga('require', 'displayfeatures');
         ga('send', 'pageview');
     </script>
@@ -69,7 +75,7 @@ require_once "config.php";
 <body>
 	<main class="thanks">
 		<h1 class="title">СПАСИБО ВАША ЗАЯВКА УСПЕШНО ПРИНЯТА!</h1>
-		<h3>Спасибо ваша заявка успешно принята! <br> Наши вежливые операторы обязательно<br> перезвонят вам в ближайшее время<br> и ответят на все вопросы.<br><br> Благодарим за заявку!</h3>
+		<h3>Наши операторы обязательно<br> перезвонят вам в ближайшее время<br> и ответят на все вопросы.<br><br> Благодарим за заявку!</h3>
 		<br><a href="/" class="btn">&#9664; ВЕРНУТЬСЯ НА ГЛАВНУЮ</a>
 	</main><!-- End main -->
 
@@ -78,7 +84,7 @@ require_once "config.php";
         (function (d, w, c) {
             (w[c] = w[c] || []).push(function() {
                 try {
-                    w.yaCounter28959100 = new Ya.Metrika({id:<?=$ya_id; ?>,
+                    w.yaCounter28959100 = new Ya.Metrika({id: <?=$ya_id; ?>,
                         webvisor:true,
                         clickmap:true,
                         trackLinks:true,

@@ -11,12 +11,11 @@
  *
  */
  	//Base settings
-	@import 'settings/reset';
-	@import 'settings/fonts';
-	@import 'settings/grids';
-	@import 'settings/colors';
-	@import 'settings/mixins';
-	@import 'settings/base';
+	@import 'utilities/fonts';
+	@import 'utilities/grids';
+	@import 'utilities/colors';
+	@import 'utilities/mixins';
+	@import 'utilities/base';
 	
 	//Base modules
 	@import 'modules/title';

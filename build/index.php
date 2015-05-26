@@ -76,7 +76,7 @@
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        ga('create', <?=$ga_id; ?>, 'auto');
+        ga('create', '<?=$ga_id; ?>', 'auto');
         ga('require', 'displayfeatures');
         ga('send', 'pageview');
     </script>
@@ -112,8 +112,8 @@
     <main class="main">
         <div class="container">
             <h1 class="title main__title">LPDevplate</h1>
-            <h2 class="main__subtitle">Lorem ipsum dolor sit amet</h2>
-            <form class="form main__form" id="jsForm_1" action="admin/bootstrap.php" method="post">
+            <h2 class="subtitle main__subtitle">Lorem ipsum dolor sit amet</h2>
+            <form class="form main__form" id="jsForm_1" action="admin/sendmail.php" method="post">
                 <h2 class="form__title">Заполните заявку <br/> и получите скидку!</h2>
                 <div class="form__container">
                     <div class="form__errorbox">

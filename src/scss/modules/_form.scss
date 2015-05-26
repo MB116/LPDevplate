@@ -47,39 +47,6 @@
 		font-weight: normal;
 		text-align: left;
 
-		&::-webkit-input-placeholder {
-			font-family: $defaultFont;
-			font-size: 18px;
-			text-transform: none;
-			color: $primary;
-			text-align: left;
-			font-weight: 300;
-			height: 40px;
-			opacity: 1;
-		}
-
-		&:-moz-placeholder {
-			font-family: $defaultFont;
-			font-size: 18px;
-			text-transform: none;
-			color: $primary;
-			text-align: left;
-			font-weight: 300;
-			height: 40px;
-			opacity: 1;
-		}
-
-		&::-moz-placeholder {
-			font-family: $defaultFont;
-			font-size: 18px;
-			text-transform: none;
-			color: $primary;
-			text-align: left;
-			font-weight: 300;
-			height: 40px;
-			opacity: 1;
-		}
-
 		&.error{
 			background-color: lighten($error, 45%);
 			border: 1px solid $error;

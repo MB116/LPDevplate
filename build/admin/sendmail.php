@@ -8,15 +8,19 @@
 	if(isset($_REQUEST["subject"])){
 		$subject = $_REQUEST["subject"];
 	}
+
 	if(isset($_REQUEST["from"])){
 		$from = $_REQUEST["from"];
 	}
+
 	if(isset($_REQUEST["Name"])){
 		$name = $_REQUEST["Name"];
 	}
+
 	if(isset($_REQUEST["Phone"])){
 		$phone = $_REQUEST["Phone"];
 	}
+
 	if(isset($_REQUEST["Email"])){
 		$email = $_REQUEST["Email"];
 	}
@@ -39,7 +43,11 @@
         'addDate'    => $time
     );
 
-if($name && $phone) {
+if($name && $phone && $email) {
+    /*
+     * Expertsender API
+     */
+        expertSender($listId, $name, $email);
 
     //***********************************************************
     //Check data is it already added and add or update

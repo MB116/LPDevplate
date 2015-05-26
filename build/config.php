@@ -11,6 +11,8 @@ $ya_id = "";
 //Mail sending vars
 $site = str_replace('www.', '', $_SERVER['HTTP_HOST']);
 
+$listId = '';
+
 $address1 = "klienty.kz@gmail.com";
 // $address2 = "";
 // $address3 = "";
