@@ -5,11 +5,11 @@
  */
 
 .form{
-	background-color: $formBg;
 	padding: 20px 0;
+	background-color: $formBg;
 	box-shadow: 0 0 5px $primary;
-	color: $text;
 	text-align: center;
+	color: $text;
 
 	//Forms inner container
 	&__container{

@@ -3,9 +3,6 @@
 	require_once "initialize.php";
 	$match = md5($admin_password);
 	$error = false;
-
-	error_reporting(-1);
-	ini_set('display_errors', 'On');
 ?>
 <!DOCTYPE html>
 <html lang="rus">
@@ -19,8 +16,8 @@
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<link rel="stylesheet" href="./css/bootstrap.css">
-	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="admin/css/bootstrap.css">
+	<link rel="stylesheet" href="admin/css/style.css">
 </head>
 <body>
 	<header>
