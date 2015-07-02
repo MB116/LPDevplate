@@ -22,6 +22,8 @@ var reload      = browserSync.reload;
  PATH VARIABLES
  ************************************************/
 var phpSrc       = './build/**/*.php';
+var phpIni       = 'C:/MAMP/bin/php/php5.6.8/php.exe';
+var phpExe       = 'C:/MAMP/conf/php5.6.8/php.ini';
 
 var stylesSrc    = './src/scss/**/*.scss';
 var stylesDest   = './build/css';
@@ -30,6 +32,8 @@ var scriptsSrc   = './src/js/index';
 var scriptsDest  = './build/js';
 var scriptsWatch = './src/js/**/*.js';
 
+var susy = 'C:/Ruby/lib/ruby/gems/2.2.0/gems/susy-2.2.5/sass';
+
 /************************************************
  SCSS(libsass) & CSS
  ************************************************/
@@ -37,7 +41,7 @@ gulp.task('styles', function() {
     gulp.src(stylesSrc)
         .pipe(sass({
             includePaths: [
-                'C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/susy-2.2.2/sass' //required for sass
+                susy //required for sass
             ],
             errLogToConsole: true,
             sourceComments: 'map',
@@ -73,8 +77,8 @@ gulp.task('js-watch', ['scripts'], browserSync.reload);
  ************************************************/
 gulp.task('server', function() {
     connect.server({
-        bin: 'C:/MAMP/bin/php/php5.6.3/php.exe',
-        ini: 'C:/MAMP/conf/php5.6.3/php.ini',
+        bin: phpIni,
+        ini: phpExe,
         base: './build'
     }, function (){
         browserSync({
