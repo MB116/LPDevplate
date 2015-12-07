@@ -42,11 +42,8 @@ $(document).ready(function() {
                 minlength:2,
                 maxlength:100
             },
-            Phone:{
-                number: true,
-                required:true,
-                minlength:11,
-                maxlength:11
+            Phone:{                
+                required:true
             }
         },
         messages:{
