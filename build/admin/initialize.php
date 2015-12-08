@@ -17,7 +17,7 @@ Database::$fields = [
     ],
     [
         'name' => 'email',
-        'title'=> 'Email'
+        'title'=> 'Город'
     ],
     [
         'name'=>'utm_source',

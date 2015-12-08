@@ -9,7 +9,7 @@
 class Database {
 
 	public static $fields = [];
-
+	protected static $per_page = 30;
 	protected static $pdo;
 
 	public static function load($file){
@@ -66,15 +66,29 @@ class Database {
 				$values.='\''.$value.'\',';
 			}
 			$fields.='addDate';
-			$values.='\''.date('d-m-Y H:i:s').'\'';
-			$addQuery = "insert into leads ($fields) values ($values)";
-			static::$pdo->exec($addQuery);
-			if(static::$pdo->errorCode()!='00000'){
-				$error = static::$pdo->errorInfo();
-				throw new Exception('insertError Error:'.$error[2]);
-			}else{
-				return true;
+			$current_date = date('d-m-Y H:i:s');
+			$day = date('Y-m-d');
+			$values.='\''.$current_date.'\'';
+			$phone = $params['phone'];
+			$query = "SELECT addDate FROM leads WHERE phone='".$phone."' AND addDate LIKE '%".$day."%' ";
+			$q = static::$pdo->query($query);
+
+			$row = $q->fetch(PDO::FETCH_ASSOC);
+
+			if($row){
+				return false;
 			}
+			else{
+				$addQuery = "insert into leads ($fields) values ($values)";
+				static::$pdo->exec($addQuery);
+				if(static::$pdo->errorCode()!='00000'){
+					$error = static::$pdo->errorInfo();
+					throw new Exception('insertError Error:'.$error[2]);
+				}else{
+					return true;
+				}
+			}
+
 		}else{
 			return false;
 		}
@@ -103,7 +117,7 @@ class Database {
 		}
 	}
 
-	public static function Get(){
+	public static function Get($page=0){
 		$table = '<tr><th class="heading">№</th>';
 		foreach (static::$fields as $field){
 			if(isset($field['title'])){
@@ -113,8 +127,15 @@ class Database {
 			}
 		}
 		$table .= '<th  align="center" class="heading" style="width:95px;">Дата</th><th class="heading">Скрыть</th>'.'</tr>';
-		$fields = static::$pdo->query('SELECT * FROM leads ORDER BY id DESC');
+
+		$pages_count = static::$pdo->query('SELECT count(*) as counted FROM leads WHERE `status`=1');
+
+		$pages_count = $pages_count->fetch(PDO::FETCH_ASSOC);
+		$pages_count  = ceil($pages_count['counted'] / static::$per_page);
+		$from_page = $page*static::$per_page;
+		$fields = static::$pdo->query("SELECT * FROM leads WHERE `status`=1 ORDER BY id DESC LIMIT ".$from_page.",".static::$per_page);
 		while($row = $fields->fetch(PDO::FETCH_ASSOC)){
+			//TODO: remove this check, now it in sql query
 			if($row['status']){
 				$table.='<tr><td>'.$row['id'].'</td>';
 				foreach (static::$fields as $field){
@@ -125,6 +146,23 @@ class Database {
 			}
 		}
 		$table = '<table class="table table-condensed table-hover">'.$table.'</table>';
+		#//TODO: make nice url
+		$actual_link = "http://$_SERVER[HTTP_HOST]/admin/index.php?page=";
+
+		$table .= '<ul class="pagination">';
+
+		for($i=1;$i<=$pages_count;$i++){
+
+			$link = $actual_link . ($i-1);
+			if(($i-1)==$page) {
+				$table .= '<li class="active"><a href="' . $link . '">' . $i . '</a></li>';
+			}
+			else{
+				$table .= '<li><a href="' . $link . '">' . $i . '</a></li>';
+			}
+		}
+
+		$table.='</ul>';
 		return $table;
 	}
 
@@ -151,7 +189,7 @@ class Database {
 		return $result;
 	}
 
-	public static function GetHidden(){
+	public static function GetHidden($page=0){
 		$table = '<tr><th class="heading">№</th>';
 		foreach (static::$fields as $field){
 			if(isset($field['title'])){
@@ -160,9 +198,15 @@ class Database {
 				$table.='<th align="center" class="heading">'.$field['name'].'</th>';
 			}
 		}
+		$pages_count = static::$pdo->query('SELECT count(*) as counted FROM leads WHERE `status`=0');
+
+		$pages_count = $pages_count->fetch(PDO::FETCH_ASSOC);
+		$pages_count  = ceil($pages_count['counted'] / static::$per_page);
+		$from_page = $page*static::$per_page;
 		$table .= '<th align="center" class="heading" style="width:95px;">Дата</th><th class="heading">Показать</th>'.'</tr>';
-		$fields = static::$pdo->query('SELECT * FROM leads ORDER BY addDate DESC');
+		$fields = static::$pdo->query('SELECT * FROM leads WHERE `status`=0 ORDER BY addDate DESC LIMIT '.$from_page.",".static::$per_page);
 		while($row = $fields->fetch(PDO::FETCH_ASSOC)){
+			//TODO: remove this check, now it in sql query
 			if(!$row['status']){
 				$table.='<tr><td>'.$row['id'].'</td>';
 				foreach (static::$fields as $field){
@@ -173,6 +217,23 @@ class Database {
 			}
 		}
 		$table = '<table class="table table-condensed table-hover">'.$table.'</table>';
+		#//TODO: make nice url
+		$actual_link = "http://$_SERVER[HTTP_HOST]/admin/index.php?showhidden=1&page=";
+
+		$table .= '<ul class="pagination">';
+
+		for($i=1;$i<=$pages_count;$i++){
+
+			$link = $actual_link . ($i-1);
+			if(($i-1)==$page) {
+				$table .= '<li class="active"><a href="' . $link . '">' . $i . '</a></li>';
+			}
+			else{
+				$table .= '<li><a href="' . $link . '">' . $i . '</a></li>';
+			}
+		}
+
+		$table.='</ul>';
 		return $table;
 	}
 
