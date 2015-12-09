@@ -4,9 +4,8 @@ $title = '';
 $description = '';
 $admin_password = "click2015";
 
-//Analitycs and Metrica
-$ga_id = "UA-5245378-1";
-$ya_id = "111637";
+//Google Tag Manager
+$gtm_id = "GTM-5NX9C2";
 
 //Mail sending vars
 $site = str_replace('www.', '', $_SERVER['HTTP_HOST']);
