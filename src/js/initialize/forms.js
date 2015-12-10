@@ -18,10 +18,11 @@ $(document).ready(function() {
 
     /******************************************
      * Phone masks
-     */
-    if( !isMobile.any && !isMobile.tablet ) {
-        $.mask.definitions['~']="[+-]";
-        $(".phone").mask("+7(999) 999-9999");
+     */    
+    $.mask.definitions['~']="[+-]";
+    $(".phone").mask("+7(999) 999-9999");
+    if( isMobile.any || isMobile.tablet ) {
+        
     }
 
 
