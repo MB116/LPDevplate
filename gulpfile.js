@@ -32,7 +32,7 @@ var scriptsSrc   = './src/js/index';
 var scriptsDest  = './build/js';
 var scriptsWatch = './src/js/**/*.js';
 
-var susy = 'C:/Ruby/lib/ruby/gems/2.2.0/gems/susy-2.2.5/sass';
+var susy = 'C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.7/sass';
 
 /************************************************
  SCSS(libsass) & CSS
